@@ -1,0 +1,6 @@
+h1. NeoWiki
+
+NeoWiki is a simple wiki.
+
+"Check the syntax":syntax
+

@@ -1,0 +1,34 @@
+AddDefaultCharset UTF-8
+
+DirectoryIndex index.wiki
+Options -Indexes
+
+RewriteEngine on
+RewriteBase /wiki
+RewriteCond %{REQUEST_FILENAME}    -f
+RewriteRule ^(.*\.wiki)$           .wiki/file.php?path=$1 [L]
+
+# Default 404 Error
+ErrorDocument 404 "<!DOCTYPE html>\
+<html>\
+    <head>\
+        <title>Page not found</title>\
+        <meta charset='utf-8' />\
+        <style type='text/css'>\
+        * {\
+            font-family: monospace;\
+        }\
+        h1 {\
+            border-bottom: solid 2px #000;\
+        }\
+        img {\
+            border: solid 2px #000;\
+        }\
+        </style>\
+    </head>\
+    <body>\
+        <h1>Page not found</h1>\
+        <p><img src='http://lolimg.net/hamster_003.jpg?eyJmb250IjoiQWNtZSIsImZvbnRTaXplIjoiMzYiLCJmb250Q29sb3IiOiJmZmZmZmYiLCJ0ZXh0IjoiV1RGID8hIiwieCI6IjI0IiwieSI6IjY0IiwiYW5nbGUiOiIwIiwiYm9yZGVyIjoidHJ1ZSIsImJvcmRlcldpZHRoIjoiMiIsImJvcmRlckNvbG9yIjoiMDAwMDAwIiwid2lkdGgiOiI0MDAiLCJoZWlnaHQiOiIzODkiLCJyZXNpemVUeXBlIjoiY3JvcCIsImJ1YmJsZVR5cGUiOiIiLCJidWJibGVTaXplIjoiMTAwIiwiYnViYmxlWCI6IjUwIiwiYnViYmxlWSI6IjUwIn0=' alt=''/></p>\
+    </body>\
+</html>"
+
