@@ -2,9 +2,8 @@
 
 // Global variables
 $scriptPath = dirname(__FILE__);
-
-// Get stylesheet
-$style = file_get_contents($scriptPath.'/style.css');
+$phpSelf = $_SERVER['PHP_SELF'];
+$baseUrl = substr($phpSelf, 0, strrpos($phpSelf, '/'));
 
 // Get the raw content
 $path = $_GET['path'];
@@ -32,14 +31,13 @@ if ($count > 0) {
     $title = $matches[1];
 }
 
+
 ?><!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
-        <style type="text/css">
-            <?php echo $style; ?>
-        </style>
+        <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl.'/style.css'; ?>"/>
     </head>
     <body>
         <?php echo $html; ?>

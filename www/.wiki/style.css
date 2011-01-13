@@ -1,3 +1,35 @@
+@font-face {
+    font-family: 'DejaVuSansMono';
+    src: url('fonts/DejaVuSansMono-webfont.eot');
+    src: local('☺'), url('fonts/DejaVuSansMono-webfont.woff') format('woff'), url('fonts/DejaVuSansMono-webfont.ttf') format('truetype'), url('fonts/DejaVuSansMono-webfont.svg#webfontKMM3nOA8') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DejaVuSansMono';
+    src: url('fonts/DejaVuSansMono-Oblique-webfont.eot');
+    src: local('☺'), url('fonts/DejaVuSansMono-Oblique-webfont.woff') format('woff'), url('fonts/DejaVuSansMono-Oblique-webfont.ttf') format('truetype'), url('fonts/DejaVuSansMono-Oblique-webfont.svg#webfont6UGvJmb8') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'DejaVuSansMono';
+    src: url('fonts/DejaVuSansMono-Bold-webfont.eot');
+    src: local('☺'), url('fonts/DejaVuSansMono-Bold-webfont.woff') format('woff'), url('fonts/DejaVuSansMono-Bold-webfont.ttf') format('truetype'), url('fonts/DejaVuSansMono-Bold-webfont.svg#webfontsmclDnj1') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DejaVuSansMono';
+    src: url('fonts/DejaVuSansMono-BoldOblique-webfont.eot');
+    src: local('☺'), url('fonts/DejaVuSansMono-BoldOblique-webfont.woff') format('woff'), url('fonts/DejaVuSansMono-BoldOblique-webfont.ttf') format('truetype'), url('fonts/DejaVuSansMono-BoldOblique-webfont.svg#webfontIFS0kNTn') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+
 html{
     margin: 0;
     padding: 0;
@@ -6,14 +38,16 @@ html{
 body {
     width: 800px;
     margin: 10px auto;
-    padding: 10px 2em;
+    padding: 2em;
     background-color: #fff;
     -moz-box-shadow: #333 3px 3px 10px;
     -webkit-box-shadow: #333 3px 3px 10px;
     box-shadow: #333 3px 3px 10px;
 }
+
+/* HEADINGS */
 h1 {
-    margin: 5px 0;
+    margin: 0;
     border-bottom: solid 1px #663;
     font-size: 1.4em;
     color: #663;
@@ -28,21 +62,70 @@ h3 {
     font-size: 1em;
     color: #363;
 }
-pre {
-    overflow: auto;
-    border: solid 2px #ccc;
-    margin: 0 0 10px 0;
-    padding: 3px;
-    background-color: #ffd;
-    font-family: monospace;
+
+/* BLOCKQUOTE */
+blockquote {
+    padding: 0;
+    margin: 0 0 0 2em;
+    padding: 1em 30px 10px 30px;
+    position: relative;
+    background-color: #eee;
+    color: #666;
+    -webkit-box-shadow: 0px 0px 5px #ababab;
+    -moz-box-shadow: 0px 0px 5px #ababab;
+    box-shadow: 0px 0px 5px #ababab;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
-quote {
-    display: block;
-    white-space: pre;
-    border: solid 2px #ccc;
-    margin: 0 0 10px 0;
-    padding: 3px;
-    background-color: #efefef;
-    font-family: monospace;
+blockquote p:first-child {
+    margin-top: 0;
+}
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+blockquote:before {
+    content: "❝";
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 30px;
+    color: #ccc;
+}
+blockquote:after {
+    content: "❞";
+    float: right;
+    margin-top: -20px;
+    margin-right: -25px;
+    font-size: 40px;
+    color: #ccc;
 }
 
+
+/* CODE */
+pre {
+    overflow: auto;
+    border: solid 2px #999;
+    padding: 1.7em .5em .5em .5em;
+    background-color: #ffd;
+    font-family: "DejaVuSansMono", monospace;
+}
+pre:before {
+    display: block;
+    position: absolute;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1em;
+    height: 1em;
+    padding: .1em 5em .2em .5em;
+    margin: -1.7em -.5em 0 -.5em;
+    text-shadow: 0px 0px 2px #666;
+    filter: dropshadow(color=#666666, offx=0, offy=0);
+    background: #999999;
+    background: -moz-linear-gradient(left, #999999 0%, #FFFFDD 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#999999), color-stop(100%,#FFFFDD));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#FFFFDD',GradientType=1 );
+}
+pre.textile:before {
+    content: "Textile";
+}
