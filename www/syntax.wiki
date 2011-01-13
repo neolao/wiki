@@ -9,6 +9,58 @@ h4. Title level 4
 h5. Title level 5
 h6. Title level 6
 
+h1. Title level 1
+
+h2. Title level 2
+
+h3. Title level 3
+
+h4. Title level 4
+
+h5. Title level 5
+
+h6. Title level 6
+
+
+
+
+
+h2. Phrase modifiers
+
+bc(textile). Lorem *ipsum* dolor sit amet, consectetur adipiscing elit.
+
+Lorem *ipsum* dolor sit amet, consectetur adipiscing elit.
+
+bc(textile). Lorem _ipsum_ dolor sit amet, consectetur adipiscing elit.
+
+Lorem _ipsum_ dolor sit amet, consectetur adipiscing elit.
+
+bc(textile). Lorem ^ipsum^ dolor sit amet, consectetur adipiscing elit.
+
+Lorem ^ipsum^ dolor sit amet, consectetur adipiscing elit.
+
+bc(textile). Lorem ~ipsum~ dolor sit amet, consectetur adipiscing elit.
+
+Lorem ~ipsum~ dolor sit amet, consectetur adipiscing elit.
+
+
+
+
+
+h2. Links
+
+bc(textile). "Lorem ipsum":http://lipsum.com/ dolor sit amet, consectetur adipiscing elit.
+
+"Lorem ipsum":http://lipsum.com/ dolor sit amet, consectetur adipiscing elit.
+
+bc(textile). ["Lorem ipsum":http://lipsum.com/] dolor sit amet, consectetur adipiscing elit.
+
+["Lorem ipsum":http://lipsum.com/] dolor sit amet, consectetur adipiscing elit.
+
+
+
+
+
 h2. Block quotations
 
 bc(textile). bq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut diam non enim molestie gravida vitae eu diam. Ut viverra neque sit amet turpis tempor hendrerit. Aenean massa metus, congue a vehicula a, vehicula sit amet lorem. Vestibulum suscipit arcu at ipsum consequat vitae iaculis tellus iaculis.
@@ -16,3 +68,19 @@ bc(textile). bq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabi
 bq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut diam non enim molestie gravida vitae eu diam. Ut viverra neque sit amet turpis tempor hendrerit. Aenean massa metus, congue a vehicula a, vehicula sit amet lorem. Vestibulum suscipit arcu at ipsum consequat vitae iaculis tellus iaculis.
 
 
+
+
+
+h2. Code
+
+h3. Textile
+
+bc(textile). bc(textile). Lorem *ipsum* dolor sit amet, consectetur adipiscing elit.
+
+bc(textile). Lorem *ipsum* dolor sit amet, consectetur adipiscing elit.
+
+h3. Bash
+
+bc(textile). bc(bash). echo "foobar"
+
+bc(bash). echo "foobar"

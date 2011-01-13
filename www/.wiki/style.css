@@ -29,7 +29,10 @@
 
 
 
-
+* {
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-size: 100%;
+}
 html{
     margin: 0;
     padding: 0;
@@ -47,20 +50,44 @@ body {
 
 /* HEADINGS */
 h1 {
-    margin: 0;
+    margin: 1em 0;
     border-bottom: solid 1px #663;
-    font-size: 1.4em;
+    font-size: 1.6em;
     color: #663;
 }
+h1:first-child {
+    margin-top: 0;
+}
 h2 {
-    margin: 5px 0;
-    font-size: 1.1em;
+    margin: 1em 0;
+    font-size: 1.4em;
     color: #336;
+    border-bottom: solid 1px #336;
 }
 h3 {
-    margin: 5px 0;
-    font-size: 1em;
+    margin: 1em 0;
+    font-size: 1.25em;
     color: #363;
+}
+h4 {
+    margin: 1em 0;
+    font-size: 1.2em;
+    color: #000;
+}
+h5 {
+    margin: 1em 0;
+    font-size: 1.1em;
+    color: #000;
+}
+h6 {
+    margin: 1em 0;
+    font-size: 1.05em;
+    color: #000;
+}
+
+/* PHRASE MODIFIERS */
+sup, sub {
+    font-size: small;
 }
 
 /* BLOCKQUOTE */
@@ -102,6 +129,10 @@ blockquote:after {
 
 
 /* CODE */
+code {
+    font-family: "DejaVuSansMono", monospace;
+    font-size: 14px;
+}
 pre {
     overflow: auto;
     border: solid 2px #999;
@@ -121,11 +152,25 @@ pre:before {
     margin: -1.7em -.5em 0 -.5em;
     text-shadow: 0px 0px 2px #666;
     filter: dropshadow(color=#666666, offx=0, offy=0);
-    background: #999999;
+    background: #999;
     background: -moz-linear-gradient(left, #999999 0%, #FFFFDD 100%);
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,#999999), color-stop(100%,#FFFFDD));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#FFFFDD',GradientType=1 );
 }
 pre.textile:before {
     content: "Textile";
+}
+pre.bash {
+    color: #fff;
+    background-color: #333;
+    border-color: #000;
+}
+pre.bash:before {
+    background: #000;
+    background: -moz-linear-gradient(left, #000 0%, #333 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#000), color-stop(100%,#333));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#333333',GradientType=1 );
+}
+pre.bash:before {
+    content: "Bash";
 }
