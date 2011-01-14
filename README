@@ -1,0 +1,5 @@
+INSTALLATION
+
+Copy all files to your server.
+Modify the RewriteBase in the .htaccess file for your site.
+
