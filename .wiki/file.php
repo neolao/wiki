@@ -53,7 +53,7 @@ if ($handle = opendir($directoryPath)) {
     while (false !== ($name = readdir($handle))) {
         if (!in_array($name, array('.', '..', '.htaccess', '.wiki'))) {
             if (is_dir($directoryPath.'/'.$name)) {
-                $folders[$name] = '<li><a class="folder" href="'.$name.'">'.$name.'</a></li>';
+                $folders[$name] = '<li><a class="folder" href="'.$name.'/">'.$name.'</a></li>';
             } else {
                 $files[$name] = '<li><a class="file" href="'.$name.'">'.$name.'</a></li>';
             }
