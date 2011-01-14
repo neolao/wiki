@@ -128,6 +128,30 @@ blockquote:after {
 }
 
 
+
+/* BROWSE */
+.browse {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    .browse li {
+        margin: 5px;
+    }
+    .browse a {
+        display: block;
+        text-decoration: none;
+        background-repeat: no-repeat;
+        background-position: center left;
+        padding: 3px 3px 3px 19px;
+    }
+    .browse a.file {
+        background-image: url(images/page_white.png);
+    }
+    .browse a.folder {
+        background-image: url(images/folder.png);
+    }
+
 /* CODE */
 code {
     font-family: "DejaVuSansMono", monospace;

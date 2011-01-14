@@ -1,6 +1,6 @@
 AddDefaultCharset UTF-8
 
-DirectoryIndex index.wiki
+DirectoryIndex index.wiki index.php index.html index.txt
 Options -Indexes
 
 RewriteEngine on

@@ -1,6 +1,7 @@
-h1. NeoWiki
+h1. Textile Wiki
 
-NeoWiki is a simple wiki.
+Textile Wiki is a simple wiki using Textile syntax.
 
 "Check the syntax":syntax.wiki
+
 

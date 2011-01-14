@@ -136,4 +136,17 @@ bc(html). <!DOCTYPE html>
 </html>
 
 
+h2. Browse
+
+h3. One column
+
+bc(textile). [browse]
+
+[browse]
+
+h3. Two column
+
+bc(textile). [browse 2]
+
+[browse 2]
 
