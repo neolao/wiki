@@ -232,9 +232,12 @@ pre.html:before {
     content: "HTML";
 }
 pre.bash {
-    color: #fff;
+    color: #eee;
     background-color: #333;
     border-color: #000;
+}
+pre.bash * {
+    color: inherit;
 }
 pre.bash:before {
     background: #000;
@@ -244,4 +247,5 @@ pre.bash:before {
 }
 pre.bash:before {
     content: "Bash";
+    color: #efefef;
 }
