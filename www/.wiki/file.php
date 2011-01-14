@@ -32,14 +32,41 @@ if ($count > 0) {
 }
 
 
+// Find code
+$availableLanguages = array('bash', 'bison', 'c', 'changelog', 'code', 'cpp', 'css', 'diff', 'haxe', 'html', 'java',
+    'javascript', 'latex', 'log', 'makefile', 'pascal', 'perl', 'php', 'prolog', 'properties', 'python', 
+    'ruby', 'scala', 'sh', 'sql', 'xml', 'xorg');
+$languages = array();
+foreach ($availableLanguages as $language) {
+    if (preg_match('|class="'.$language.'"|', $html)) {
+        array_push($languages, $language);
+    }
+}
+$hasCode = (count($languages) > 0);
+
 ?><!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
         <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl.'/style.css'; ?>"/>
+
+        <?php 
+        if ($hasCode) {
+            echo '<script type="text/javascript" src="', $baseUrl, '/syntaxHighlighter/sh_main.js"></script>';
+            foreach ($languages as $language) {
+                echo '<script type="text/javascript" src="', $baseUrl, '/syntaxHighlighter/sh_', $language, '.js"></script>';
+            }
+        }
+        ?>
     </head>
+    <?php if ($hasCode) { ?>
+    <body onload="sh_highlightDocumentCustom();">
+    <?php } else { ?>
     <body>
+    <?php } ?>
+
         <?php echo $html; ?>
+
     </body>
 </html>

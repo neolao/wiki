@@ -140,7 +140,11 @@ pre {
     background-color: #ffd;
     font-family: "DejaVuSansMono", monospace;
 }
+pre * {
+    font-family: "DejaVuSansMono", monospace;
+}
 pre:before {
+    content: "Code";
     display: block;
     position: absolute;
     color: #fff;
@@ -157,8 +161,75 @@ pre:before {
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,#999999), color-stop(100%,#FFFFDD));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#FFFFDD',GradientType=1 );
 }
+
+.sh_keyword { color: blue; font-weight: bold; }           /* language keywords */
+.sh_type { color: darkgreen; }                            /* basic types */
+.sh_usertype { color: teal; }                             /* user defined types */
+.sh_string { color: red; }                                /* strings and chars */
+.sh_regexp { color: orange; }                             /* regular expressions */
+.sh_specialchar { color: pink; }                          /* e.g., \n, \t, \\ */
+.sh_comment { color: brown; font-style: italic; }         /* comments */
+.sh_number { color: purple; }                             /* literal numbers */
+.sh_preproc { color: darkblue; font-weight: bold; }       /* e.g., #include, import */
+.sh_symbol { color: darkred; }                            /* e.g., <, >, + */
+.sh_function { color: black; font-weight: bold; }         /* function calls and declarations */
+.sh_cbracket { color: red; }                              /* block brackets (e.g., {, }) */
+.sh_todo { font-weight: bold; background-color: cyan; }   /* TODO and FIXME */
+
+/* for OOP */
+.sh_classname { color: teal; }
+
+/* line numbers (not yet implemented) */
+.sh_linenum { color: black; }
+
+/* Internet related */
+.sh_url { color: blue; text-decoration: underline; }
+
+/* for ChangeLog and Log files */
+.sh_date { color: blue; font-weight: bold; }
+.sh_time, pre.sh_sourceCode .sh_file { color: darkblue; font-weight: bold; }
+.sh_ip, .sh_name { color: darkgreen; }
+
+/* for Prolog, Perl... */
+.sh_variable { color: darkgreen; }
+
+/* for LaTeX */
+.sh_italics { color: darkgreen; font-style: italic; }
+.sh_bold { color: darkgreen; font-weight: bold; }
+.sh_underline { color: darkgreen; text-decoration: underline; }
+.sh_fixed { color: green; }
+.sh_argument { color: darkgreen; }
+.sh_optionalargument { color: purple; }
+.sh_math { color: orange; }
+.sh_bibtex { color: blue; }
+
+/* for diffs */
+pre.sh_sourceCode .sh_oldfile { color: orange; }
+pre.sh_sourceCode .sh_newfile { color: darkgreen; }
+pre.sh_sourceCode .sh_difflines { color: blue; }
+
+/* for css */
+pre.sh_sourceCode .sh_selector { color: purple; }
+pre.sh_sourceCode .sh_property { color: blue; }
+pre.sh_sourceCode .sh_value { color: darkgreen; font-style: italic; }
+
+/* other */
+pre.sh_sourceCode .sh_section { color: black; font-weight: bold; }
+pre.sh_sourceCode .sh_paren { color: red; }
+pre.sh_sourceCode .sh_attribute { color: darkgreen; }
+
+
+
+
+
 pre.textile:before {
     content: "Textile";
+}
+pre.javascript:before {
+    content: "Javascript";
+}
+pre.html:before {
+    content: "HTML";
 }
 pre.bash {
     color: #fff;

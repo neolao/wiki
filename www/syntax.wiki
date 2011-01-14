@@ -73,14 +73,67 @@ bq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut diam n
 
 h2. Code
 
+h3. Default
+
+bc(textile). bc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+bc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+
 h3. Textile
 
 bc(textile). bc(textile). Lorem *ipsum* dolor sit amet, consectetur adipiscing elit.
 
 bc(textile). Lorem *ipsum* dolor sit amet, consectetur adipiscing elit.
 
+
 h3. Bash
 
 bc(textile). bc(bash). echo "foobar"
 
 bc(bash). echo "foobar"
+
+
+h3. Javascript
+
+bc(textile). bc(javascript). var foo = function()
+{
+    alert("bar");
+};
+
+bc(javascript). var foo = function()
+{
+    alert("bar");
+};
+
+
+h3. HTML
+
+bc(textile). bc(html). <!DOCTYPE html>
+<html>
+    <head>
+        <title>Document title</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        <p>roin velit est, hendrerit vitae, aliquet tincidunt, accumsan eu, pede.</p>
+    </body>
+</html>
+
+bc(html). <!DOCTYPE html>
+<html>
+    <head>
+        <title>Document title</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        <p>roin velit est, hendrerit vitae, aliquet tincidunt, accumsan eu, pede.</p>
+    </body>
+</html>
+
+
+
