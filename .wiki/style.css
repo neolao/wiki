@@ -85,6 +85,17 @@ h6 {
     color: #000;
 }
 
+/* LINKS */
+a {
+    color: #00f;
+}
+a:hover {
+    color: #009;
+}
+a:active {
+    color: #003;
+}
+
 /* PHRASE MODIFIERS */
 sup, sub {
     font-size: small;
@@ -115,7 +126,7 @@ blockquote:before {
     position: absolute;
     top: 0;
     left: 5px;
-    font-size: 30px;
+    font-size: 40px;
     color: #ccc;
 }
 blockquote:after {
@@ -142,8 +153,19 @@ blockquote:after {
         display: block;
         text-decoration: none;
         background-repeat: no-repeat;
-        background-position: center left;
-        padding: 3px 3px 3px 19px;
+        background-position: 5px center;
+        padding: 3px 3px 3px 25px;
+        color: #00f;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+    .browse a:hover {
+        background-color: #9dd9f8;
+        color: #009;
+    }
+    .browse a:active {
+        background-color: #7db9e8;
+        color: #003;
     }
     .browse a.file {
         background-image: url(images/page_white.png);
