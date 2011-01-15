@@ -144,7 +144,7 @@ bc(textile). [browse]
 
 [browse]
 
-h3. Two column
+h3. Two columns
 
 bc(textile). [browse 2]
 
