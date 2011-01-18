@@ -82,21 +82,30 @@ $html = preg_replace('|<p>\[browse ?(\d*)?\]</p>|', $browse, $html);
         <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl.'/style.css'; ?>"/>
         <script type="text/javascript" src="<?php echo $baseUrl.'/head.min.js'; ?>"></script>
 
-        <?php 
+        <?php
+        echo '<script type="text/javascript">';
+
+        // Code highlighter
         if ($hasCode) {
             $highlighter = array($baseUrl.'/syntaxHighlighter/sh_main.js');
             foreach ($languages as $language) {
                 array_push($highlighter, $baseUrl.'/syntaxHighlighter/sh_'.$language.'.js');
             }
 
-            echo '<script type="text/javascript">';
             echo 'head.js(';
             foreach ($highlighter as $js) {
                 echo '"', $js, '",';
             }
             echo 'function(){sh_highlightDocumentCustom()});';
-            echo '</script>';
         }
+
+        // Toolbar
+        echo 'head.js(';
+        echo '"', $baseUrl, '/toolbar/jquery-1.4.4.min.js",';
+        echo '"', $baseUrl, '/toolbar/toolbar.js"';
+        echo ');';
+
+        echo '</script>';
         ?>
     </head>
     <body>
