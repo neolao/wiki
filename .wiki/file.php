@@ -80,21 +80,26 @@ $html = preg_replace('|<p>\[browse ?(\d*)?\]</p>|', $browse, $html);
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
         <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl.'/style.css'; ?>"/>
+        <script type="text/javascript" src="<?php echo $baseUrl.'/head.min.js'; ?>"></script>
 
         <?php 
         if ($hasCode) {
-            echo '<script type="text/javascript" src="', $baseUrl, '/syntaxHighlighter/sh_main.js"></script>';
+            $highlighter = array($baseUrl.'/syntaxHighlighter/sh_main.js');
             foreach ($languages as $language) {
-                echo '<script type="text/javascript" src="', $baseUrl, '/syntaxHighlighter/sh_', $language, '.js"></script>';
+                array_push($highlighter, $baseUrl.'/syntaxHighlighter/sh_'.$language.'.js');
             }
+
+            echo '<script type="text/javascript">';
+            echo 'head.js(';
+            foreach ($highlighter as $js) {
+                echo '"', $js, '",';
+            }
+            echo 'function(){sh_highlightDocumentCustom()});';
+            echo '</script>';
         }
         ?>
     </head>
-    <?php if ($hasCode) { ?>
-    <body onload="sh_highlightDocumentCustom();">
-    <?php } else { ?>
     <body>
-    <?php } ?>
 
         <?php echo $html; ?>
 

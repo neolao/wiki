@@ -4,12 +4,3 @@ Textile Wiki is a simple wiki using Textile syntax.
 
 "Check the syntax":syntax.wiki
 
-bc(textile).. h1. Textile Wiki example
-
-"Lorem ipsum":http://lipsum.com dolor sit amet, consectetur adipiscing elit.
-Sed a _sem eu mi_ mattis malesuada.
-
-* Proin accumsan
-* Nulla in sapien
-* Cursus nec ultricies ante molestie.
-
