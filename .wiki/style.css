@@ -342,6 +342,7 @@ pre.bash:before {
         text-decoration: none;
     }
     #toc a:hover {
+        color: #fff;
         text-decoration: underline;
     }
     #toc .level1 {
