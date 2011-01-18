@@ -310,7 +310,7 @@ pre.bash:before {
     height: 2em;
     border-bottom: solid 1px #999;
 
-    background: #45484d;
+    background: #000;
     background: -moz-linear-gradient(top, #45484d 0%, #000000 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000));
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
@@ -318,3 +318,47 @@ pre.bash:before {
     -moz-box-shadow: 0px 1px 5px #000;
     box-shadow: 0px 1px 5px #000;
 }
+#toc {
+    background-color: #000;
+    color: #ddd;
+    border: solid 1px #ccc;
+    border-top: solid 1px #000;
+    border-right: solid 1px #000;
+    padding: 10px;
+    position: absolute;
+    top: 2em;
+    right: 0;
+    -webkit-box-shadow: 0px 1px 5px #000;
+    -moz-box-shadow: 0px 1px 5px #000;
+    box-shadow: 0px 1px 5px #000;
+}
+    #toc * {
+        font-size: .9em;
+        margin: 0 0 .5em 0;
+    }
+    #toc a {
+        color: inherit;
+        font-size: 1em;
+        text-decoration: none;
+    }
+    #toc a:hover {
+        text-decoration: underline;
+    }
+    #toc .level1 {
+    }
+    #toc .level2 {
+        margin-left: 1.5em;
+    }
+    #toc .level3 {
+        margin-left: 3em;
+    }
+    #toc .level4 {
+        margin-left: 4.5em;
+    }
+    #toc .level5 {
+        margin-left: 6em;
+    }
+    #toc .level6 {
+        margin-left: 7.5em;
+    }
+
