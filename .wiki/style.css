@@ -321,7 +321,7 @@ pre.bash:before {
 #toc {
     background-color: #000;
     color: #ddd;
-    border: solid 1px #ccc;
+    border: solid 1px #999;
     border-top: solid 1px #000;
     border-right: solid 1px #000;
     padding: 10px;
