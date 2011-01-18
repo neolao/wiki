@@ -80,6 +80,10 @@ $html = preg_replace('|<p>\[browse ?(\d*)?\]</p>|', $browse, $html);
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
         <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl.'/style.css'; ?>"/>
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/ie.css"/>
+        <![endif]-->
+
         <script type="text/javascript" src="<?php echo $baseUrl.'/head.min.js'; ?>"></script>
 
         <?php
