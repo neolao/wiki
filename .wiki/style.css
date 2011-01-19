@@ -424,3 +424,8 @@ pre.bash:before {
         color: #fff;
         text-decoration: underline;
     }
+    #searchResult .error {
+        color: #f99;
+        font-weight: bold;
+    }
+

@@ -113,23 +113,71 @@ $('h1, h2, h3, h4, h5, h6').each(function(index)
 
 
 // Search engine
+var searchQueue = [];
+var searchResultUrls = [];
 var onSearchKeyUp = function(event)
 {
-    var term = searchInput.val();
-
     if (event.keyCode == '13') {
         if (!searchInput.hasClass("loading")) {
             searchInput.addClass("loading");
         }
         searchResult.css('display', 'none');
-        $.get(baseUrl+'/search.php', {term: term}, onSearch);
+        searchQueue = [];
+        searchResultUrls = [];
+        $.getJSON(baseUrl+'/fileList.php', onGetFileList);
     }
+};
+var onGetFileList = function(list)
+{
+    if (typeof list == "string") {
+        searchInput.removeClass("loading");
+        searchResult.css('display', 'block');
+        searchResult.html('<p class="error">'+list+'</p>');
+        return;
+    }
+    searchQueue = list;
+    nextSearch();
+};
+var nextSearch = function()
+{
+    if (searchQueue.length === 0) {
+        searchInput.removeClass("loading");
+        return;
+    }
+
+    var term = searchInput.val();
+    var file = searchQueue.shift();
+    $.getJSON(baseUrl+'/search.php', {file: file, term: term}, onSearch);
 };
 var onSearch = function(data)
 {
-    searchInput.removeClass("loading");
+    if (data !== false) {
+        searchResultUrls.push(data);
+    }
+    updateSearchResult();
+    nextSearch();
+};
+var updateSearchResult = function()
+{
     searchResult.css('display', 'block');
-    searchResult.html(data);
+
+    var count = searchResultUrls.length;
+    var html = '<h1>'+count;
+    if (count > 1) {
+        html += ' results';
+    } else {
+        html += ' result';
+    }
+    html += '</h1>';
+
+    html += '<ul>';
+    $.each(searchResultUrls, function(index, link)
+    {
+        html += '<li><a href="'+link+'">'+link+'</a></li>';
+    });
+    html += '</ul>';
+
+    searchResult.html(html);
 };
 var search = $(document.createElement('div'));
 search.attr('id', 'search');
