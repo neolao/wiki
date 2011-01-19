@@ -108,6 +108,7 @@ $html = preg_replace('|<p>\[browse ?(\d*)?\]</p>|', $browse, $html);
         echo '"', $baseUrl, '/toolbar/jquery-1.4.4.min.js",';
         echo '"', $baseUrl, '/toolbar/toolbar.js"';
         echo ');';
+        echo 'var baseUrl = "', $baseUrl, '";';
 
         echo '</script>';
         ?>

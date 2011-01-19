@@ -7,8 +7,9 @@ body.before(toolbar);
 
 // Animation
 var toolbarHovered = false;
-var toolbarOpened = true;
+var toolbarOpened = false;
 var toolbarMoving = false;
+var toolbarTimeoutId;
 var onToolbarOpened = function()
 {
     toolbarOpened = true;
@@ -18,10 +19,12 @@ var onToolbarClosed = function()
 {
     toolbarOpened = false;
     toolbarMoving = false;
+    toolbarHovered = false;
 };
 var onToolbarOver = function()
 {
     toolbarHovered = true;
+    clearTimeout(toolbarTimeoutId);
 };
 var onToolbarOut = function()
 {
@@ -38,15 +41,20 @@ var onMouseMove = function(event)
     var mouseY = event.pageY - toolbarY;
     var height = toolbar.height() + 20;
 
+    clearTimeout(toolbarTimeoutId);
     if (toolbarOpened && mouseY > height) {
-        toolbarMoving = true;
-        toolbar.fadeOut(200, onToolbarClosed);
+        toolbarTimeoutId = setTimeout("onHideTimeout()", 200);
     } else if (!toolbarOpened && mouseY <= height) {
         toolbarMoving = true;
         toolbar.fadeIn(200, onToolbarOpened);
     }
 };
 var onMouseLeave = function(event)
+{
+    clearTimeout(toolbarTimeoutId);
+    toolbarTimeoutId = setTimeout("onHideTimeout()", 200);
+};
+var onHideTimeout = function()
 {
     toolbarMoving = true;
     toolbar.fadeOut(200, onToolbarClosed);
@@ -101,3 +109,34 @@ $('h1, h2, h3, h4, h5, h6').each(function(index)
         $(document).scrollTop(scrollY);
     });
 });
+
+
+
+// Search engine
+var onSearchKeyUp = function(event)
+{
+    var term = searchInput.val();
+
+    if (event.keyCode == '13') {
+        if (!searchInput.hasClass("loading")) {
+            searchInput.addClass("loading");
+        }
+        searchResult.css('display', 'none');
+        $.get(baseUrl+'/search.php', {term: term}, onSearch);
+    }
+};
+var onSearch = function(data)
+{
+    searchInput.removeClass("loading");
+    searchResult.css('display', 'block');
+    searchResult.html(data);
+};
+var search = $(document.createElement('div'));
+search.attr('id', 'search');
+toolbar.append(search);
+var searchInput = $(document.createElement('input'));
+searchInput.keyup(onSearchKeyUp);
+search.append(searchInput);
+var searchResult = $(document.createElement('div'));
+searchResult.attr('id', 'searchResult');
+search.append(searchResult);
