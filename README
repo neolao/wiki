@@ -3,3 +3,5 @@ INSTALLATION
 Copy all files to your server.
 Modify the RewriteBase in the .htaccess file for your site.
 
+Create the file .wiki/config.ini based on .wiki/config.ini.dist in order to override default configuration.
+

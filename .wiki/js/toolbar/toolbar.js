@@ -124,7 +124,7 @@ var onSearchKeyUp = function(event)
         searchResult.css('display', 'none');
         searchQueue = [];
         searchResultUrls = [];
-        $.getJSON(baseUrl+'/fileList.php', onGetFileList);
+        $.getJSON(SCRIPTS_URL+'/fileList.php', onGetFileList);
     }
 };
 var onGetFileList = function(list)
@@ -147,7 +147,7 @@ var nextSearch = function()
 
     var term = searchInput.val();
     var file = searchQueue.shift();
-    $.getJSON(baseUrl+'/search.php', {file: file, term: term}, onSearch);
+    $.getJSON(SCRIPTS_URL+'/search.php', {file: file, term: term}, onSearch);
 };
 var onSearch = function(data)
 {

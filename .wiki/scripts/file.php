@@ -1,26 +1,26 @@
 <?php
 
-// Global variables
-$scriptPath = dirname(__FILE__);
-$phpSelf = $_SERVER['PHP_SELF'];
-$baseUrl = substr($phpSelf, 0, strrpos($phpSelf, '/'));
+include(dirname(__FILE__).'/../inc/common.php');
+
 
 // Get the raw content
 $path = $_GET['path'];
-$documentRoot = $scriptPath.'/../';
-$filePath = $documentRoot.$path;
+$filePath = BASE_PATH.'/'.$path;
 
-if (!is_file($filePath)) {
+
+// Check invalid file
+if (isOutsideWiki($filePath)) {
     header('HTTP/1.1 404 Not Found');
     exit;
 }
+
 
 $filePath = realpath($filePath);
 $directoryPath = dirname($filePath);
 $content = file_get_contents($filePath);
 
 // Convert the raw content to wiki content
-include_once($scriptPath.'/Textile.php');
+include_once(INC_PATH.'/Textile.php');
 $textile = new Textile();
 $html = $textile->TextileThis($content);
 
@@ -79,21 +79,15 @@ $html = preg_replace('|<p>\[browse ?(\d*)?\]</p>|', $browse, $html);
     <head>
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
-        <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl.'/style.css'; ?>"/>
-        <!--[if lt IE 9]>
-        <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl; ?>/ie.css"/>
-        <![endif]-->
 
-        <script type="text/javascript" src="<?php echo $baseUrl.'/head.min.js'; ?>"></script>
-
+        <?php echo getCommonHtmlHeader(); ?>
         <?php
-        echo '<script type="text/javascript">';
-
         // Code highlighter
+        echo '<script type="text/javascript">';
         if ($hasCode) {
-            $highlighter = array($baseUrl.'/syntaxHighlighter/sh_main.js');
+            $highlighter = array(JS_URL.'/syntaxHighlighter/sh_main.js');
             foreach ($languages as $language) {
-                array_push($highlighter, $baseUrl.'/syntaxHighlighter/sh_'.$language.'.js');
+                array_push($highlighter, JS_URL.'/syntaxHighlighter/sh_'.$language.'.js');
             }
 
             echo 'head.js(';
@@ -102,16 +96,9 @@ $html = preg_replace('|<p>\[browse ?(\d*)?\]</p>|', $browse, $html);
             }
             echo 'function(){sh_highlightDocumentCustom()});';
         }
-
-        // Toolbar
-        echo 'head.js(';
-        echo '"', $baseUrl, '/toolbar/jquery-1.4.4.min.js",';
-        echo '"', $baseUrl, '/toolbar/toolbar.js"';
-        echo ');';
-        echo 'var baseUrl = "', $baseUrl, '";';
-
         echo '</script>';
         ?>
+        <?php echo getToolbarHeader(); ?>
     </head>
     <body>
 

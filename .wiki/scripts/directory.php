@@ -1,18 +1,16 @@
 <?php
-// Global variables
-$scriptPath = dirname(__FILE__);
-$phpSelf = $_SERVER['PHP_SELF'];
-$baseUrl = substr($phpSelf, 0, strrpos($phpSelf, '/'));
+include(dirname(__FILE__).'/../inc/common.php');
 
 // Get the raw content
 $path = $_GET['path'];
-$documentRoot = $scriptPath.'/../';
-$directoryPath = $documentRoot.$path;
+$directoryPath = BASE_PATH.$path;
 
-if (!is_dir($directoryPath)) {
+// Check invalid directory
+if (isOutsideWiki($directoryPath)) {
     header('HTTP/1.1 404 Not Found');
     exit;
 }
+
 
 // Page title
 $directoryPath = realpath($directoryPath);
@@ -51,7 +49,8 @@ $browse .= '</ul>';
     <head>
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
-        <link rel="stylesheet" type="text/css" href="<?php echo $baseUrl.'/style.css'; ?>"/>
+        <?php echo getCommonHtmlHeader(); ?>
+        <?php echo getToolbarHeader(); ?>
     </head>
     <body>
         <h1><?php echo $title; ?></h1>

@@ -1,9 +1,6 @@
 <?php
 
-// Global variables
-$phpSelf = $_SERVER['PHP_SELF'];
-$baseUrl = substr($phpSelf, 0, strrpos($phpSelf, '.wiki')-1);
-$basePath = realpath(dirname(__FILE__).'/../');
+include(dirname(__FILE__).'/../inc/common.php');
 
 // Get parameters
 if (empty($_GET['file'])) {
@@ -18,17 +15,11 @@ if (get_magic_quotes_gpc()) {
     $fileRelativePath = stripslashes($fileRelativePath);
     $term = stripslashes($term);
 }
-$fileUrl = $baseUrl.$fileRelativePath;
-$filePath = $basePath.$fileRelativePath;
+$fileUrl = BASE_URL.$fileRelativePath;
+$filePath = BASE_PATH.$fileRelativePath;
 
-// Check if the file is readable
-if (!is_readable($filePath)) {
-    die('false');
-}
-
-// Cannot search outside wiki
-$filePath = realpath($filePath);
-if (strpos($filePath, $basePath) === false) {
+// Check invalid file
+if (isOutsideWiki($filePath)) {
     die('false');
 }
 
