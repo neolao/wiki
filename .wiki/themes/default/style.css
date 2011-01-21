@@ -262,10 +262,6 @@ tr:last-child td:last-child {
     }
 
 /* CODE */
-code {
-    font-family: "DejaVuSansMono", monospace;
-    font-size: 1em;
-}
 pre {
     overflow: auto;
     border: solid 2px #999;
@@ -277,6 +273,10 @@ pre {
 pre * {
     font-family: "DejaVuSansMono", monospace;
     font-size: 1em;
+}
+code {
+    font-family: "DejaVuSansMono", monospace;
+    font-size: .9em;
 }
 pre:before {
     content: "Code";
