@@ -61,7 +61,8 @@ function getCommonHtmlHeader()
 
     // Theme
     $themeUrl = getThemeUrl();
-    $html .= '<link rel="stylesheet" type="text/css" href="'.$themeUrl.'/style.css"/>';
+    $html .= '<link rel="stylesheet" type="text/css" href="'.$themeUrl.'/screen.css" media="screen"/>';
+    $html .= '<link rel="stylesheet" type="text/css" href="'.$themeUrl.'/print.css" media="print"/>';
     $html .= '<!--[if lt IE 9]>';
     $html .= '<link rel="stylesheet" type="text/css" href="'.$themeUrl.'/ie.css"/>';
     $html .= '<![endif]-->';
