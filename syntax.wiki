@@ -23,6 +23,36 @@ h6. Title level 6
 
 
 
+h2. Paragraphs
+
+bc(textile). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at libero ut leo lobortis vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ut aliquet nisl. Etiam non nisi vel nisi sollicitudin ornare id et turpis. Integer ac mauris id mi suscipit sollicitudin a quis leo.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at libero ut leo lobortis vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ut aliquet nisl. Etiam non nisi vel nisi sollicitudin ornare id et turpis. Integer ac mauris id mi suscipit sollicitudin a quis leo.
+
+h3. Left alignment
+
+bc(textile). p<. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at libero ut leo lobortis vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ut aliquet nisl. Etiam non nisi vel nisi sollicitudin ornare id et turpis. Integer ac mauris id mi suscipit sollicitudin a quis leo.
+
+p<. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at libero ut leo lobortis vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ut aliquet nisl. Etiam non nisi vel nisi sollicitudin ornare id et turpis. Integer ac mauris id mi suscipit sollicitudin a quis leo.
+
+h3. Right alignment
+
+bc(textile). p>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at libero ut leo lobortis vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ut aliquet nisl. Etiam non nisi vel nisi sollicitudin ornare id et turpis. Integer ac mauris id mi suscipit sollicitudin a quis leo.
+
+p>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at libero ut leo lobortis vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ut aliquet nisl. Etiam non nisi vel nisi sollicitudin ornare id et turpis. Integer ac mauris id mi suscipit sollicitudin a quis leo.
+
+h3. Centered
+
+bc(textile). p=. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at libero ut leo lobortis vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ut aliquet nisl. Etiam non nisi vel nisi sollicitudin ornare id et turpis. Integer ac mauris id mi suscipit sollicitudin a quis leo.
+
+p=. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at libero ut leo lobortis vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ut aliquet nisl. Etiam non nisi vel nisi sollicitudin ornare id et turpis. Integer ac mauris id mi suscipit sollicitudin a quis leo.
+
+h3. Justify
+
+bc(textile). p<>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at libero ut leo lobortis vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ut aliquet nisl. Etiam non nisi vel nisi sollicitudin ornare id et turpis. Integer ac mauris id mi suscipit sollicitudin a quis leo.
+
+p<>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at libero ut leo lobortis vehicula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus ut aliquet nisl. Etiam non nisi vel nisi sollicitudin ornare id et turpis. Integer ac mauris id mi suscipit sollicitudin a quis leo.
+
 
 
 h2. Phrase modifiers
