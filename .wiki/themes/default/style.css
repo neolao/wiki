@@ -48,6 +48,33 @@ body {
     box-shadow: #333 3px 3px 10px;
 }
 
+
+/* SCREEN SPECIFIC */
+@media screen and (max-width: 800px) {
+    html {
+        padding: 2em;
+        background-color: #fff;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+@media screen and (max-device-width: 800px) {
+    * {
+        font-size: 120%;
+    }
+}
+@media screen and (max-device-width: 800px) and (orientation: portrait) {
+    * {
+        font-size: 150%;
+    }
+}
+
 /* HEADINGS */
 h1 {
     margin: 1em 0;
@@ -88,6 +115,7 @@ h6 {
 /* LINKS */
 a {
     color: #00f;
+    font-size: 1em;
 }
 a:hover {
     color: #009;
@@ -96,19 +124,29 @@ a:active {
     color: #003;
 }
 
+
+/* PARAGRAPH */
+p {
+    font-size: 1em;
+}
+
 /* PHRASE MODIFIERS */
 sup, sub {
-    font-size: small;
+    font-size: .8em;
+}
+strong, em {
+    font-size: 1em;
 }
 
 /* BLOCKQUOTE */
 blockquote {
     padding: 0;
     margin: 0 0 0 2em;
-    padding: 1em 30px 10px 30px;
+    padding: 10px 2.5em 10px 2.5em;
     position: relative;
     background-color: #eee;
     color: #666;
+    text-align: justify;
     -webkit-box-shadow: 0px 0px 5px #ababab;
     -moz-box-shadow: 0px 0px 5px #ababab;
     box-shadow: 0px 0px 5px #ababab;
@@ -124,17 +162,17 @@ blockquote p:last-child {
 blockquote:before {
     content: "❝";
     position: absolute;
-    top: 0;
-    left: 5px;
-    font-size: 40px;
+    top: .2em;
+    left: .2em;
+    font-size: 2em;
     color: #ccc;
 }
 blockquote:after {
     content: "❞";
     float: right;
-    margin-top: -20px;
-    margin-right: -25px;
-    font-size: 40px;
+    margin-top: -1ex;
+    margin-right: -1em;
+    font-size: 2em;
     color: #ccc;
 }
 
@@ -226,7 +264,7 @@ tr:last-child td:last-child {
 /* CODE */
 code {
     font-family: "DejaVuSansMono", monospace;
-    font-size: 14px;
+    font-size: 1em;
 }
 pre {
     overflow: auto;
@@ -234,9 +272,11 @@ pre {
     padding: 1.7em .5em .5em .5em;
     background-color: #ffd;
     font-family: "DejaVuSansMono", monospace;
+    font-size: 1em;
 }
 pre * {
     font-family: "DejaVuSansMono", monospace;
+    font-size: 1em;
 }
 pre:before {
     content: "Code";
