@@ -104,6 +104,44 @@ bq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut diam n
 
 
 
+h2. Tables
+
+bc(textile). |_. ID|_. Name|_. Location|
+|24|Eric|Paris|
+|28|Olivia|Paris|
+
+|_. ID|_. Name|_. Location|
+|24|Eric|Paris|
+|28|Olivia|Paris|
+
+h3. Column span
+
+bc(textile). |_. Column 1 |_. Column 2 |
+|\2. Cell spanning 2 columns |
+
+|_. Column 1 |_. Column 2 |
+|\2. Cell spanning 2 columns |
+
+h3. Row span
+
+bc(textile). |_. Column 1 |_. Column 2 |
+| Row 1 |/2. Cell spanning 2 rows|
+| Row 2 |
+
+h3. Alignment
+
+bc(textile). |_. Alignment |
+|>. Right |
+|<. Left |
+|=. Center |
+
+|_. Text alignment |
+|>. Right |
+|<. Left |
+|=. Center |
+
+
+
 
 h2. Code
 

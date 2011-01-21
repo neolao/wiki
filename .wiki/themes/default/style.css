@@ -139,6 +139,55 @@ blockquote:after {
 }
 
 
+/* TABLES */
+table {
+    margin: .5em 0;
+    border-collapse: separate;
+    border-spacing: 2px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    border: solid 1px #999;
+}
+th, td {
+    padding: .2em .5em;
+}
+th {
+    background: #499bea;
+    background: -moz-linear-gradient(top, #499bea 0%, #207ce5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#499bea), color-stop(100%,#207ce5));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5',GradientType=0 );
+    color: #fff;
+    text-shadow: 0px 1px 1px #333;
+}
+th:first-child {
+    -webkit-border-top-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    border-top-left-radius: 5px;
+}
+th:last-child {
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-right-radius: 5px;
+}
+tr {
+    background-color: #fff;
+}
+tr:nth-child(odd) {
+    background-color: #eee;
+    border: solid 1px #fff;
+}
+tr:last-child td:first-child {
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-left-radius: 5px;
+}
+tr:last-child td:last-child {
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 
 /* BROWSE */
 .browse {
@@ -331,6 +380,9 @@ pre.bash:before {
     -webkit-box-shadow: 0px 1px 5px #000;
     -moz-box-shadow: 0px 1px 5px #000;
     box-shadow: 0px 1px 5px #000;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-left-radius: 10px;
 }
     #toc * {
         font-size: .9em;
@@ -376,9 +428,18 @@ pre.bash:before {
         background-repeat: no-repeat;
         background-position: 2px center;
         padding-left: 20px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
     }
     #search input.loading {
         background-image: url(images/loading.gif);
+    }
+    #search input:focus {
+        -webkit-box-shadow: 0px 0px 4px #ff0;
+        -moz-box-shadow: 0px 0px 4px #ff0;
+        box-shadow: 0px 0px 4px #ff0;
+        outline: none;
     }
 #searchResult {
     display: none;
@@ -394,6 +455,9 @@ pre.bash:before {
     -webkit-box-shadow: 0px 1px 5px #000;
     -moz-box-shadow: 0px 1px 5px #000;
     box-shadow: 0px 1px 5px #000;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-radius-bottomright: 10px;
+    border-bottom-right-radius: 10px;
 }
     #searchResult p {
         font-size: .9em;
