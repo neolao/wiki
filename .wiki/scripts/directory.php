@@ -3,7 +3,7 @@ include(dirname(__FILE__).'/../inc/common.php');
 
 // Get the raw content
 $path = $_GET['path'];
-$directoryPath = BASE_PATH.$path;
+$directoryPath = BASE_PATH.'/'.$path;
 
 // Check invalid directory
 if (isOutsideWiki($directoryPath)) {
