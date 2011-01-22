@@ -141,7 +141,7 @@ strong, em {
 /* BLOCKQUOTE */
 blockquote {
     padding: 0;
-    margin: 0 0 0 2em;
+    margin: 0 0 .5em 2em;
     padding: 10px 2.5em 10px 2.5em;
     position: relative;
     background-color: #eee;
