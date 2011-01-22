@@ -175,6 +175,8 @@ bc(textile). |_. Alignment |
 
 h2. Code
 
+Available languages : textile, bash, bison, c, changelog, cpp, css, diff, haxe, html, java, javascript, latex, log, makefile, pascal, perl, php, prolog, properties, python, ruby, scala, sh, sql, xml, xorg
+
 h3. Default
 
 bc(textile). bc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.

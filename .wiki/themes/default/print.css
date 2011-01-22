@@ -34,7 +34,10 @@ pre:before {
     display: block;
     border-bottom: dotted 1px #999;
     margin-bottom: .5em;
+    content: "Code";
 }
+
+/** Captions */
 pre.textile:before {
     content: "Textile";
 }
@@ -45,6 +48,86 @@ pre.html:before {
     content: "HTML";
 }
 pre.bash:before {
-    content: "Bash";
+    content: "bash";
 }
-
+pre.textile:before {
+    content: "Textile";
+}
+pre.javascript:before {
+    content: "Javascript";
+}
+pre.html:before {
+    content: "HTML";
+}
+pre.bison:before {
+    content: "Bison";
+}
+pre.c:before {
+    content: "C";
+}
+pre.changelog:before {
+    content: "Changelog";
+}
+pre.code:before {
+    content: "Code";
+}
+pre.cpp:before {
+    content: "C++";
+}
+pre.css:before {
+    content: "CSS";
+}
+pre.diff:before {
+    content: "Diff";
+}
+pre.haxe:before {
+    content: "HaXe";
+}
+pre.java:before {
+    content: "Java";
+}
+pre.latex:before {
+    content: "LaTeX";
+}
+pre.log:before {
+    content: "Log";
+}
+pre.makefile:before {
+    content: "Make file";
+}
+pre.pascal:before {
+    content: "Pascal";
+}
+pre.perl:before {
+    content: "Perl";
+}
+pre.php:before {
+    content: "PHP";
+}
+pre.prolog:before {
+    content: "Prolog";
+}
+pre.properties:before {
+    content: "Properties";
+}
+pre.python:before {
+    content: "Python";
+}
+pre.ruby:before {
+    content: "Ruby";
+}
+pre.scala:before {
+    content: "Scala";
+}
+pre.sh:before {
+    content: "sh";
+}
+pre.sql:before {
+    content: "SQL";
+}
+pre.xml:before {
+    content: "XML";
+}
+pre.xorg:before {
+    content: "xorg";
+}

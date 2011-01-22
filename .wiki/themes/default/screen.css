@@ -297,38 +297,30 @@ pre:before {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#FFFFDD',GradientType=1 );
 }
 
-.sh_keyword { color: blue; font-weight: bold; }           /* language keywords */
-.sh_type { color: darkgreen; }                            /* basic types */
-.sh_usertype { color: teal; }                             /* user defined types */
-.sh_string { color: red; }                                /* strings and chars */
-.sh_regexp { color: orange; }                             /* regular expressions */
-.sh_specialchar { color: pink; }                          /* e.g., \n, \t, \\ */
-.sh_comment { color: brown; font-style: italic; }         /* comments */
-.sh_number { color: purple; }                             /* literal numbers */
-.sh_preproc { color: darkblue; font-weight: bold; }       /* e.g., #include, import */
-.sh_symbol { color: darkred; }                            /* e.g., <, >, + */
-.sh_function { color: black; font-weight: bold; }         /* function calls and declarations */
-.sh_cbracket { color: red; }                              /* block brackets (e.g., {, }) */
-.sh_todo { font-weight: bold; background-color: cyan; }   /* TODO and FIXME */
+.sh_keyword { color: blue; font-weight: bold; }             /** language keywords */
+.sh_type { color: darkgreen; }                              /** basic types */
+.sh_usertype { color: teal; }                               /** user defined types */
+.sh_string { color: red; }                                  /** strings and chars */
+.sh_regexp { color: orange; }                               /** regular expressions */
+.sh_specialchar { color: pink; }                            /** e.g., \n, \t, \\ */
+.sh_comment { color: brown; font-style: italic; }           /** comments */
+.sh_number { color: purple; }                               /** literal numbers */
+.sh_preproc { color: darkblue; font-weight: bold; }         /** e.g., #include, import */
+.sh_symbol { color: darkred; }                              /** e.g., <, >, + */
+.sh_function { color: black; font-weight: bold; }           /** function calls and declarations */
+.sh_cbracket { color: red; }                                /** block brackets (e.g., {, }) */
+.sh_todo { font-weight: bold; background-color: cyan; }     /** TODO and FIXME */
+.sh_classname { color: teal; }                              /** for OOP */
+.sh_linenum { color: black; }                               /** line numbers (not yet implemented) */
+.sh_url { color: blue; text-decoration: underline; }        /** Internet related */
+.sh_variable { color: darkgreen; }                          /** for Prolog, Perl... */
 
-/* for OOP */
-.sh_classname { color: teal; }
-
-/* line numbers (not yet implemented) */
-.sh_linenum { color: black; }
-
-/* Internet related */
-.sh_url { color: blue; text-decoration: underline; }
-
-/* for ChangeLog and Log files */
+/** for ChangeLog and Log files */
 .sh_date { color: blue; font-weight: bold; }
 .sh_time, pre.sh_sourceCode .sh_file { color: darkblue; font-weight: bold; }
 .sh_ip, .sh_name { color: darkgreen; }
 
-/* for Prolog, Perl... */
-.sh_variable { color: darkgreen; }
-
-/* for LaTeX */
+/** for LaTeX */
 .sh_italics { color: darkgreen; font-style: italic; }
 .sh_bold { color: darkgreen; font-weight: bold; }
 .sh_underline { color: darkgreen; text-decoration: underline; }
@@ -338,17 +330,17 @@ pre:before {
 .sh_math { color: orange; }
 .sh_bibtex { color: blue; }
 
-/* for diffs */
+/** for diffs */
 pre.sh_sourceCode .sh_oldfile { color: orange; }
 pre.sh_sourceCode .sh_newfile { color: darkgreen; }
 pre.sh_sourceCode .sh_difflines { color: blue; }
 
-/* for css */
+/** for css */
 pre.sh_sourceCode .sh_selector { color: purple; }
 pre.sh_sourceCode .sh_property { color: blue; }
 pre.sh_sourceCode .sh_value { color: darkgreen; font-style: italic; }
 
-/* other */
+/** other */
 pre.sh_sourceCode .sh_section { color: black; font-weight: bold; }
 pre.sh_sourceCode .sh_paren { color: red; }
 pre.sh_sourceCode .sh_attribute { color: darkgreen; }
@@ -356,7 +348,7 @@ pre.sh_sourceCode .sh_attribute { color: darkgreen; }
 
 
 
-
+/** Captions */
 pre.textile:before {
     content: "Textile";
 }
@@ -365,6 +357,78 @@ pre.javascript:before {
 }
 pre.html:before {
     content: "HTML";
+}
+pre.bison:before {
+    content: "Bison";
+}
+pre.c:before {
+    content: "C";
+}
+pre.changelog:before {
+    content: "Changelog";
+}
+pre.code:before {
+    content: "Code";
+}
+pre.cpp:before {
+    content: "C++";
+}
+pre.css:before {
+    content: "CSS";
+}
+pre.diff:before {
+    content: "Diff";
+}
+pre.haxe:before {
+    content: "HaXe";
+}
+pre.java:before {
+    content: "Java";
+}
+pre.latex:before {
+    content: "LaTeX";
+}
+pre.log:before {
+    content: "Log";
+}
+pre.makefile:before {
+    content: "Make file";
+}
+pre.pascal:before {
+    content: "Pascal";
+}
+pre.perl:before {
+    content: "Perl";
+}
+pre.php:before {
+    content: "PHP";
+}
+pre.prolog:before {
+    content: "Prolog";
+}
+pre.properties:before {
+    content: "Properties";
+}
+pre.python:before {
+    content: "Python";
+}
+pre.ruby:before {
+    content: "Ruby";
+}
+pre.scala:before {
+    content: "Scala";
+}
+pre.sh:before {
+    content: "sh";
+}
+pre.sql:before {
+    content: "SQL";
+}
+pre.xml:before {
+    content: "XML";
+}
+pre.xorg:before {
+    content: "xorg";
 }
 pre.bash {
     color: #eee;
@@ -381,7 +445,7 @@ pre.bash:before {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#333333',GradientType=1 );
 }
 pre.bash:before {
-    content: "Bash";
+    content: "bash";
     color: #efefef;
 }
 
