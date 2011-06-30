@@ -1,0 +1,5 @@
+h1. Installation
+
+Textile Wiki works with *Apache* and *PHP 4*.
+You just need to unzip the application into the document root.
+
