@@ -4,7 +4,6 @@ DirectoryIndex index.wiki index.php index.html index.txt
 Options -Indexes
 
 RewriteEngine on
-RewriteBase /wiki
 RewriteCond %{REQUEST_FILENAME}             -f
 RewriteRule ^(.*\.wiki)$                    .wiki/scripts/file.php?path=$1 [L]
 

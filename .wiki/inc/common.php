@@ -15,7 +15,7 @@ define('BASE_URL',      $baseUrl);
 define('PROJECT_URL',   BASE_URL.'/.wiki');
 define('JS_URL',        PROJECT_URL.'/js');
 define('THEMES_URL',    PROJECT_URL.'/themes');
-define('SCRIPTS_URL',    PROJECT_URL.'/scripts');
+define('SCRIPTS_URL',   PROJECT_URL.'/scripts');
 
 
 /**
