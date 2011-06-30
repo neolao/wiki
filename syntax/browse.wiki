@@ -1,0 +1,13 @@
+h1. Browse
+
+h2. One column
+
+bc(textile). [browse]
+
+[browse]
+
+h2. Two columns
+
+bc(textile). [browse 2]
+
+[browse 2]

@@ -1,0 +1,5 @@
+h1. Block quotations
+
+bc(textile). bq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut diam non enim molestie gravida vitae eu diam. Ut viverra neque sit amet turpis tempor hendrerit. Aenean massa metus, congue a vehicula a, vehicula sit amet lorem. Vestibulum suscipit arcu at ipsum consequat vitae iaculis tellus iaculis.
+
+bq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ut diam non enim molestie gravida vitae eu diam. Ut viverra neque sit amet turpis tempor hendrerit. Aenean massa metus, congue a vehicula a, vehicula sit amet lorem. Vestibulum suscipit arcu at ipsum consequat vitae iaculis tellus iaculis.

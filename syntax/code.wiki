@@ -1,0 +1,65 @@
+h1. Code
+
+Available languages : textile, bash, bison, c, changelog, cpp, css, diff, haxe, html, java, javascript, latex, log, makefile, pascal, perl, php, prolog, properties, python, ruby, scala, sh, sql, xml, xorg
+
+h2. Default
+
+bc(textile). bc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+bc. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+
+h2. Textile
+
+bc(textile). bc(textile). Lorem *ipsum* dolor sit amet, consectetur adipiscing elit.
+
+bc(textile). Lorem *ipsum* dolor sit amet, consectetur adipiscing elit.
+
+
+h2. Bash
+
+bc(textile). bc(bash). echo "foobar"
+
+bc(bash). echo "foobar"
+
+
+h2. Javascript
+
+bc(textile). bc(javascript). var foo = function()
+{
+    alert("bar");
+};
+
+bc(javascript). var foo = function()
+{
+    alert("bar");
+};
+
+
+h2. HTML
+
+bc(textile). bc(html). <!DOCTYPE html>
+<html>
+    <head>
+        <title>Document title</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        <p>roin velit est, hendrerit vitae, aliquet tincidunt, accumsan eu, pede.</p>
+    </body>
+</html>
+
+bc(html). <!DOCTYPE html>
+<html>
+    <head>
+        <title>Document title</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        <p>roin velit est, hendrerit vitae, aliquet tincidunt, accumsan eu, pede.</p>
+    </body>
+</html>

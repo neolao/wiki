@@ -1,0 +1,11 @@
+h1. Links
+
+
+bc(textile). "Lorem ipsum":http://lipsum.com/ dolor sit amet, consectetur adipiscing elit.
+
+"Lorem ipsum":http://lipsum.com/ dolor sit amet, consectetur adipiscing elit.
+
+bc(textile). ["Lorem ipsum":http://lipsum.com/] dolor sit amet, consectetur adipiscing elit.
+
+["Lorem ipsum":http://lipsum.com/] dolor sit amet, consectetur adipiscing elit.
+

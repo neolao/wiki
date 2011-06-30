@@ -2,5 +2,14 @@ h1. Textile Wiki
 
 Textile Wiki is a simple wiki using Textile syntax.
 
-"Check the syntax":syntax.wiki
+h2. The syntax
 
+* "Headings":syntax/headings.wiki
+* "Paragraphs":syntax/paragraphs.wiki
+* "Phrase modifiers":syntax/phrase-modifiers.wiki
+* "Links":syntax/links.wiki
+* "Lists":syntax/lists.wiki
+* "Block quotations":syntax/block-quotations.wiki
+* "Tables":syntax/tables.wiki
+* "Code":syntax/code.wiki
+* "Browse":syntax/browse.wiki

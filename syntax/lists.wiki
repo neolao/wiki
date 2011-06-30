@@ -1,0 +1,30 @@
+h1. Lists
+
+bc(textile). * Lorem ipsum
+* Dolor sit amet
+* Consectetur adipiscing
+
+* Lorem ipsum
+* Dolor sit amet
+* Consectetur adipiscing
+
+
+bc(textile). # Lorem ipsum
+# Dolor sit amet
+# Consectetur adipiscing
+
+# Lorem ipsum
+# Dolor sit amet
+# Consectetur adipiscing
+
+
+bc(textile). # Lorem ipsum
+** Dolor sit amet
+** Bloubu boulga
+# Consectetur adipiscing
+
+# Lorem ipsum
+** Dolor sit amet
+** Bloubi boulga
+# Consectetur adipiscing
+

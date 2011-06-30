@@ -1,0 +1,35 @@
+h1. Tables
+
+bc(textile). |_. ID|_. Name|_. Location|
+|24|Eric|Paris|
+|28|Olivia|Paris|
+
+|_. ID|_. Name|_. Location|
+|24|Eric|Paris|
+|28|Olivia|Paris|
+
+h2. Column span
+
+bc(textile). |_. Column 1 |_. Column 2 |
+|\2. Cell spanning 2 columns |
+
+|_. Column 1 |_. Column 2 |
+|\2. Cell spanning 2 columns |
+
+h2. Row span
+
+bc(textile). |_. Column 1 |_. Column 2 |
+| Row 1 |/2. Cell spanning 2 rows|
+| Row 2 |
+
+h2. Alignment
+
+bc(textile). |_. Alignment |
+|>. Right |
+|<. Left |
+|=. Center |
+
+|_. Text alignment |
+|>. Right |
+|<. Left |
+|=. Center |

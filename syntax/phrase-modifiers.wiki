@@ -1,0 +1,18 @@
+h1. Phrase modifiers
+
+
+bc(textile). Lorem *ipsum* dolor sit amet, consectetur adipiscing elit.
+
+Lorem *ipsum* dolor sit amet, consectetur adipiscing elit.
+
+bc(textile). Lorem _ipsum_ dolor sit amet, consectetur adipiscing elit.
+
+Lorem _ipsum_ dolor sit amet, consectetur adipiscing elit.
+
+bc(textile). Lorem ^ipsum^ dolor sit amet, consectetur adipiscing elit.
+
+Lorem ^ipsum^ dolor sit amet, consectetur adipiscing elit.
+
+bc(textile). Lorem ~ipsum~ dolor sit amet, consectetur adipiscing elit.
+
+Lorem ~ipsum~ dolor sit amet, consectetur adipiscing elit.
