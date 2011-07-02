@@ -1,0 +1,43 @@
+h1. Images
+
+h2. Normal
+
+!images/neo_avatar_100x100.png!
+
+bc(textile). !images/neo_avatar_100x100.png!
+
+
+h2. Center
+
+p=. !images/neo_avatar_100x100.png!
+
+bc(textile). p=. !images/neo_avatar_100x100.png!
+
+
+h2. Align to right
+
+p>. !images/neo_avatar_100x100.png!
+
+bc(textile). p>. !images/neo_avatar_100x100.png!
+
+
+
+h2. Float to right
+
+!>.images/neo_avatar_100x100.png!
+
+bc(textile). !>.images/neo_avatar_100x100.png!
+
+
+h2. Float to left
+
+!<.images/neo_avatar_100x100.png!
+
+bc(textile). !<.images/neo_avatar_100x100.png!
+
+
+h2. Link
+
+!images/neo_avatar_100x100.png!:http://textilewiki.com
+
+bc(textile). !images/neo_avatar_100x100.png!:http://textilewiki.com

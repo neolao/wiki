@@ -55,6 +55,11 @@ body {
     -webkit-box-shadow: #333 3px 3px 10px;
     box-shadow: #333 3px 3px 10px;
 }
+body:after {
+    content: "";
+    display: block;
+    clear: both;
+}
 
 
 /* SCREEN SPECIFIC */
@@ -89,6 +94,7 @@ h1 {
     border-bottom: solid 1px #663;
     font-size: 1.6em;
     color: #663;
+    clear: both;
 }
 h1:first-child {
     margin-top: 0;
@@ -98,26 +104,31 @@ h2 {
     font-size: 1.4em;
     color: #336;
     border-bottom: solid 1px #336;
+    clear: both;
 }
 h3 {
     margin: 1em 0;
     font-size: 1.25em;
     color: #363;
+    clear: both;
 }
 h4 {
     margin: 1em 0;
     font-size: 1.2em;
     color: #000;
+    clear: both;
 }
 h5 {
     margin: 1em 0;
     font-size: 1.1em;
     color: #000;
+    clear: both;
 }
 h6 {
     margin: 1em 0;
     font-size: 1.05em;
     color: #000;
+    clear: both;
 }
 
 /* LINKS */

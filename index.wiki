@@ -15,5 +15,6 @@ h2. The syntax
 * "Lists":syntax/lists.wiki
 * "Block quotations":syntax/block-quotations.wiki
 * "Tables":syntax/tables.wiki
+* "Images":syntax/images.wiki
 * "Code":syntax/code.wiki
 * "Browse":syntax/browse.wiki
