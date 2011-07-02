@@ -1,0 +1,5 @@
+Options -Indexes
+
+<Files config.ini>
+    deny from all
+</Files>

@@ -106,6 +106,9 @@ function isOutsideWiki($path)
     if (strpos($path, BASE_PATH) === false) {
         return true;
     }
+    if (strpos($path, PROJECT_PATH) !== false) {
+        return true;
+    }
 
     return false;
 }
