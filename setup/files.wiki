@@ -1,0 +1,5 @@
+h1. Files and directories
+
+You can put any files and directories as you want.
+
+All files with the extension @.wiki@ are displayed as a wiki page.
