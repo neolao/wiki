@@ -1,6 +1,6 @@
 h1. Code
 
-Available languages : textile, bash, bison, c, changelog, cpp, css, diff, haxe, html, java, javascript, latex, log, makefile, pascal, perl, php, prolog, properties, python, ruby, scala, sh, sql, xml, xorg
+Available languages : @textile@, @bash@, @bison@, @c@, @changelog@, @cpp@, @css@, @diff@, @haxe@, @html@, @java@, @javascript@, @latex@, @log@, @makefile@, @pascal@, @perl@, @php@, @prolog@, @properties@, @python@, @ruby@, @scala@, @sh@, @sql@, @xml@, @xorg@
 
 h2. Default
 
@@ -63,3 +63,146 @@ bc(html). <!DOCTYPE html>
         <p>roin velit est, hendrerit vitae, aliquet tincidunt, accumsan eu, pede.</p>
     </body>
 </html>
+
+
+h2. PHP
+
+bc(textile).. bc(php).. /**
+ * Example
+ */
+class Foo extends Bar implements Plop
+{
+    const   CONSTANT_DEFAULT    = 'default';
+    const   CONSTANT_CASE1      = 'case1';
+
+    /**
+     * Property
+     *
+     * @var string
+     */
+    private $_prop;
+
+    /**
+     * Constructor
+     *
+     * @param   string      $arg1       Argument 1
+     */
+    public function __construct($arg1)
+    {
+        $this->_prop = $arg1;
+    }
+
+    /**
+     * My function
+     *
+     * @param   int         $arg1       Argument 1
+     * @param   string      $arg2       Argument 2
+     */
+    public function myFunction($arg1 = 42, $arg2 = 'default')
+    {
+        if ($arg2 === self::CONSTANT_DEFAULT) {
+            // comment 1
+            echo "ok";
+        } else {
+            // comment 2
+            die('failed');
+        }
+    }
+}
+
+bc(php).. /**
+ * Example
+ */
+class Foo extends Bar implements Plop
+{
+    const   CONSTANT_DEFAULT    = 'default';
+    const   CONSTANT_CASE1      = 'case1';
+
+    /**
+     * Property
+     *
+     * @var string
+     */
+    private $_prop;
+
+    /**
+     * Constructor
+     *
+     * @param   string      $arg1       Argument 1
+     */
+    public function __construct($arg1)
+    {
+        $this->_prop = $arg1;
+    }
+
+    /**
+     * My function
+     *
+     * @param   int         $arg1       Argument 1
+     * @param   string      $arg2       Argument 2
+     */
+    public function myFunction($arg1 = 42, $arg2 = 'default')
+    {
+        if ($arg2 === self::CONSTANT_DEFAULT) {
+            // comment 1
+            echo "ok";
+        } else {
+            // comment 2
+            die('failed');
+        }
+    }
+}
+
+
+
+h2. CSS
+
+bc(textile).. bc(css).. .test {
+    display: none;
+}
+
+h6 {
+    margin: 1em 0;
+    color: #363;
+    clear: both;
+    font-family: Ostrich;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+/* LINKS */
+a {
+    color: #090;
+    font-size: 1em;
+}
+a:hover {
+    color: #0f0;
+}
+a:active {
+    color: #060;
+}
+
+bc(css).. .test {
+    display: none;
+}
+
+h6 {
+    margin: 1em 0;
+    color: #363;
+    clear: both;
+    font-family: Ostrich;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+/* LINKS */
+a {
+    color: #090;
+    font-size: 1em;
+}
+a:hover {
+    color: #0f0;
+}
+a:active {
+    color: #060;
+}
