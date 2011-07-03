@@ -62,11 +62,7 @@
 
 
 
-* {
-    font-family: Helvetica, Verdana, Arial, sans-serif;
-    font-size: 100%;
-}
-html{
+html {
     margin: 0;
     padding: 0;
     background: #111;
@@ -74,12 +70,15 @@ html{
     background-repeat: repeat;
 }
 body {
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-size: 100%;
     width: 800px;
     margin: 10px auto;
     padding: 2em;
     background-color: #000;
     background-color: rgba(0, 0, 0, .5);
     color: #ccc;
+    border: solid 2px #111;
 }
 body:after {
     content: "";
@@ -353,27 +352,27 @@ pre:before {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#222222',GradientType=1 );
 }
 
-.sh_keyword { color: blue; font-weight: bold; }             /** language keywords */
-.sh_type { color: darkgreen; }                              /** basic types */
-.sh_usertype { color: teal; }                               /** user defined types */
-.sh_string { color: red; }                                  /** strings and chars */
+.sh_keyword { color: #669; font-weight: bold; }             /** language keywords */
+.sh_type { color: #696; }                              /** basic types */
+.sh_usertype { color: #ff0; }                               /** user defined types */
+.sh_string { color: #933; }                                  /** strings and chars */
 .sh_regexp { color: orange; }                               /** regular expressions */
 .sh_specialchar { color: pink; }                            /** e.g., \n, \t, \\ */
 .sh_comment { color: brown; font-style: italic; }           /** comments */
 .sh_number { color: purple; }                               /** literal numbers */
-.sh_preproc { color: darkblue; font-weight: bold; }         /** e.g., #include, import */
-.sh_symbol { color: darkred; }                              /** e.g., <, >, + */
-.sh_function { color: black; font-weight: bold; }           /** function calls and declarations */
-.sh_cbracket { color: red; }                                /** block brackets (e.g., {, }) */
+.sh_preproc { color: #449; font-weight: bold; }         /** e.g., #include, import */
+.sh_symbol { color: #966; }                              /** e.g., <, >, + */
+.sh_function { color: #99c; font-weight: bold; }           /** function calls and declarations */
+.sh_cbracket { color: #966; }                                /** block brackets (e.g., {, }) */
 .sh_todo { font-weight: bold; background-color: cyan; }     /** TODO and FIXME */
-.sh_classname { color: teal; }                              /** for OOP */
-.sh_linenum { color: black; }                               /** line numbers (not yet implemented) */
-.sh_url { color: blue; text-decoration: underline; }        /** Internet related */
+.sh_classname { color: #ff0; }                              /** for OOP */
+.sh_linenum { color: #999; }                               /** line numbers (not yet implemented) */
+.sh_url { color: #090; text-decoration: underline; }        /** Internet related */
 .sh_variable { color: darkgreen; }                          /** for Prolog, Perl... */
 
 /** for ChangeLog and Log files */
-.sh_date { color: blue; font-weight: bold; }
-.sh_time, pre.sh_sourceCode .sh_file { color: darkblue; font-weight: bold; }
+.sh_date { color: #669; font-weight: bold; }
+.sh_time, pre.sh_sourceCode .sh_file { color: #449; font-weight: bold; }
 .sh_ip, .sh_name { color: darkgreen; }
 
 /** for LaTeX */
@@ -384,21 +383,21 @@ pre:before {
 .sh_argument { color: darkgreen; }
 .sh_optionalargument { color: purple; }
 .sh_math { color: orange; }
-.sh_bibtex { color: blue; }
+.sh_bibtex { color: #669; }
 
 /** for diffs */
 pre.sh_sourceCode .sh_oldfile { color: orange; }
 pre.sh_sourceCode .sh_newfile { color: darkgreen; }
-pre.sh_sourceCode .sh_difflines { color: blue; }
+pre.sh_sourceCode .sh_difflines { color: #669; }
 
 /** for css */
 pre.sh_sourceCode .sh_selector { color: purple; }
-pre.sh_sourceCode .sh_property { color: blue; }
+pre.sh_sourceCode .sh_property { color: #669; }
 pre.sh_sourceCode .sh_value { color: darkgreen; font-style: italic; }
 
 /** other */
-pre.sh_sourceCode .sh_section { color: black; font-weight: bold; }
-pre.sh_sourceCode .sh_paren { color: red; }
+pre.sh_sourceCode .sh_section { color: #999; font-weight: bold; }
+pre.sh_sourceCode .sh_paren { color: #900; }
 pre.sh_sourceCode .sh_attribute { color: darkgreen; }
 
 
@@ -502,29 +501,23 @@ pre.bash:before {
     left: 0;
     width: 100%;
     height: 2em;
-    border-bottom: solid 1px #999;
+    border-bottom: solid 1px #333;
 
-    background: #000;
-    background: -moz-linear-gradient(top, #45484d 0%, #000000 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000));
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
-    -webkit-box-shadow: 0px 1px 5px #000;
-    -moz-box-shadow: 0px 1px 5px #000;
-    box-shadow: 0px 1px 5px #000;
+    background: #030;
+    background: -moz-linear-gradient(top, #060 0%, #030 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#060), color-stop(100%,#030));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006600', endColorstr='#003300',GradientType=0 );
 }
 #toc {
-    background-color: #000;
+    background-color: #030;
     color: #ddd;
-    border: solid 1px #999;
-    border-top: solid 1px #000;
-    border-right: solid 1px #000;
+    border: solid 1px #333;
+    border-top: solid 1px #030;
+    border-right: solid 1px #030;
     padding: 10px;
     position: absolute;
     top: 2em;
     right: 0;
-    -webkit-box-shadow: 0px 1px 5px #000;
-    -moz-box-shadow: 0px 1px 5px #000;
-    box-shadow: 0px 1px 5px #000;
     -webkit-border-bottom-left-radius: 10px;
     -moz-border-radius-bottomleft: 10px;
     border-bottom-left-radius: 10px;
@@ -566,9 +559,9 @@ pre.bash:before {
 }
     #search input {
         font-size: .9em;
-        background: #000;
+        background: #111;
         color: #fff;
-        border: solid 1px #ddd;
+        border: solid 1px #030;
         background-image: url(images/search.png);
         background-repeat: no-repeat;
         background-position: 2px center;
@@ -591,15 +584,12 @@ pre.bash:before {
     position: absolute;
     top: 2em;
     left: 0;
-    background-color: #000;
+    background-color: #030;
     color: #ddd;
-    border: solid 1px #999;
-    border-top: solid 1px #000;
-    border-left: solid 1px #000;
+    border: solid 1px #333;
+    border-top: solid 1px #030;
+    border-left: solid 1px #030;
     padding: 10px;
-    -webkit-box-shadow: 0px 1px 5px #000;
-    -moz-box-shadow: 0px 1px 5px #000;
-    box-shadow: 0px 1px 5px #000;
     -webkit-border-bottom-right-radius: 10px;
     -moz-border-radius-bottomright: 10px;
     border-bottom-right-radius: 10px;
@@ -609,12 +599,12 @@ pre.bash:before {
         margin: 0;
     }
     #searchResult h1 {
-        font-size: .9em;
+        font-size: 1.3em;
+        letter-spacing: 0;
         border: none;
         color: #fff;
         background-color: inherit;
         margin: 0 0 .8em 0;
-        text-decoration: underline;
     }
     #searchResult ul {
         margin: 0;
