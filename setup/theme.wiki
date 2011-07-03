@@ -1,0 +1,9 @@
+h1. Theme
+
+To change the theme, you must create @.wiki/config.ini@ based on @.wiki/config.ini.dist@ and set the name of the theme to use.
+
+h2. Examples
+
+bc. theme = default
+
+bc. theme = dark

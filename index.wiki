@@ -5,6 +5,7 @@ Textile Wiki is a simple wiki using Textile syntax.
 h2. Setup
 
 * "Installation":setup/installation.wiki
+* "Change the theme":setup/theme.wiki
 
 h2. The syntax
 

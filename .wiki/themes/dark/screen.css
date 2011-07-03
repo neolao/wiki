@@ -38,6 +38,27 @@
     font-weight: bold;
     font-style: italic;
 }
+@font-face {
+    font-family: 'Ostrich';
+    src: url('fonts/ostrich/ostrich-regular-webfont.eot');
+    src: url('fonts/ostrich/ostrich-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ostrich/ostrich-regular-webfont.woff') format('woff'),
+         url('fonts/ostrich/ostrich-regular-webfont.ttf') format('truetype'),
+         url('fonts/ostrich/ostrich-regular-webfont.svg#OstrichSansMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Ostrich';
+    src: url('fonts/ostrich/ostrich-black-webfont.eot');
+    src: url('fonts/ostrich/ostrich-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ostrich/ostrich-black-webfont.woff') format('woff'),
+         url('fonts/ostrich/ostrich-black-webfont.ttf') format('truetype'),
+         url('fonts/ostrich/ostrich-black-webfont.svg#OstrichSansBlack') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
 
 
 
@@ -48,16 +69,17 @@
 html{
     margin: 0;
     padding: 0;
-    background-color: #666;
+    background: #111;
+    background-image: url(images/background.png);
+    background-repeat: repeat;
 }
 body {
     width: 800px;
     margin: 10px auto;
     padding: 2em;
-    background-color: #fff;
-    -moz-box-shadow: #333 3px 3px 10px;
-    -webkit-box-shadow: #333 3px 3px 10px;
-    box-shadow: #333 3px 3px 10px;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .5);
+    color: #ccc;
 }
 body:after {
     content: "";
@@ -95,56 +117,69 @@ body:after {
 /* HEADINGS */
 h1 {
     margin: 1em 0;
-    border-bottom: solid 1px #663;
-    font-size: 1.6em;
-    color: #663;
+    border-bottom: solid 1px #eee;
+    color: #eee;
     clear: both;
+    font-family: Ostrich;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
 }
 h1:first-child {
     margin-top: 0;
 }
 h2 {
     margin: 1em 0;
-    font-size: 1.4em;
-    color: #336;
-    border-bottom: solid 1px #336;
+    color: #9c9;
+    border-bottom: solid 1px #9c9;
     clear: both;
+    font-family: Ostrich;
+    font-weight: normal;
+    font-size: 2em;
 }
 h3 {
     margin: 1em 0;
-    font-size: 1.25em;
     color: #363;
     clear: both;
+    font-family: Ostrich;
+    font-weight: normal;
+    font-size: 1.8em;
 }
 h4 {
     margin: 1em 0;
-    font-size: 1.2em;
-    color: #000;
+    color: #363;
     clear: both;
+    font-family: Ostrich;
+    font-weight: normal;
+    font-size: 1.6em;
 }
 h5 {
     margin: 1em 0;
-    font-size: 1.1em;
-    color: #000;
+    color: #363;
     clear: both;
+    font-family: Ostrich;
+    font-weight: normal;
+    font-size: 1.4em;
 }
 h6 {
     margin: 1em 0;
-    font-size: 1.05em;
-    color: #000;
+    color: #363;
     clear: both;
+    font-family: Ostrich;
+    font-weight: normal;
+    font-size: 1.2em;
 }
 
 /* LINKS */
 a {
-    color: #00f;
+    color: #090;
     font-size: 1em;
 }
 a:hover {
-    color: #009;
+    color: #0f0;
 }
 a:active {
-    color: #003;
+    color: #060;
 }
 
 
@@ -167,12 +202,12 @@ blockquote {
     margin: 0 0 .5em 2em;
     padding: 10px 2.5em 10px 2.5em;
     position: relative;
-    background-color: #eee;
-    color: #666;
+    background-color: #222;
+    color: #ccc;
     text-align: justify;
-    -webkit-box-shadow: 0px 0px 5px #ababab;
+    -webkit-box-shadow: 0px 0px 5px #000;
     -moz-box-shadow: 0px 0px 5px #ababab;
-    box-shadow: 0px 0px 5px #ababab;
+    box-shadow: 0px 0px 5px #000;
     -moz-border-radius: 10px;
     border-radius: 10px;
 }
@@ -208,17 +243,17 @@ table {
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
-    border: solid 1px #999;
+    border: solid 1px #151515;
 }
 th, td {
     padding: .2em .5em;
 }
 th {
-    background: #499bea;
-    background: -moz-linear-gradient(top, #499bea 0%, #207ce5 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#499bea), color-stop(100%,#207ce5));
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5',GradientType=0 );
-    color: #fff;
+    background: #030;
+    background: -moz-linear-gradient(top, #060 0%, #030 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#060), color-stop(100%,#030));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006600', endColorstr='#003300',GradientType=0 );
+    color: #ddd;
     text-shadow: 0px 1px 1px #333;
     text-align: left;
 }
@@ -233,11 +268,11 @@ th:last-child {
     border-top-right-radius: 5px;
 }
 tr {
-    background-color: #fff;
+    background-color: #101010;
 }
 tr:nth-child(odd) {
-    background-color: #eee;
-    border: solid 1px #fff;
+    background-color: #191919;
+    border: solid 1px #333;
 }
 tr:last-child td:first-child {
     -webkit-border-bottom-left-radius: 5px;
@@ -266,17 +301,14 @@ tr:last-child td:last-child {
         background-repeat: no-repeat;
         background-position: 5px center;
         padding: 3px 3px 3px 25px;
-        color: #00f;
         -moz-border-radius: 5px;
         border-radius: 5px;
     }
     .browse a:hover {
-        background-color: #9dd9f8;
-        color: #009;
+        background-color: #333;
     }
     .browse a:active {
-        background-color: #7db9e8;
-        color: #003;
+        background-color: #222;
     }
     .browse a.file {
         background-image: url(images/page_white.png);
@@ -288,9 +320,9 @@ tr:last-child td:last-child {
 /* CODE */
 pre {
     overflow: auto;
-    border: solid 2px #999;
+    border: solid 2px #333;
     padding: 1.7em .5em .5em .5em;
-    background-color: #ffd;
+    background-color: #222;
     font-family: "DejaVuSansMono", monospace;
     font-size: 1em;
 }
@@ -306,7 +338,7 @@ pre:before {
     content: "Code";
     display: block;
     position: absolute;
-    color: #fff;
+    color: #ccc;
     font-size: 1em;
     font-weight: bold;
     line-height: 1em;
@@ -315,10 +347,10 @@ pre:before {
     margin: -1.7em -.5em 0 -.5em;
     text-shadow: 0px 0px 2px #666;
     filter: dropshadow(color=#666666, offx=0, offy=0);
-    background: #999;
-    background: -moz-linear-gradient(left, #999999 0%, #FFFFDD 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#999999), color-stop(100%,#FFFFDD));
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#999999', endColorstr='#FFFFDD',GradientType=1 );
+    background: #333;
+    background: -moz-linear-gradient(left, #333 0%, #222 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#333), color-stop(100%,#222));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#222222',GradientType=1 );
 }
 
 .sh_keyword { color: blue; font-weight: bold; }             /** language keywords */
@@ -454,23 +486,8 @@ pre.xml:before {
 pre.xorg:before {
     content: "xorg";
 }
-pre.bash {
-    color: #eee;
-    background-color: #333;
-    border-color: #000;
-}
-pre.bash * {
-    color: inherit;
-}
-pre.bash:before {
-    background: #000;
-    background: -moz-linear-gradient(left, #000 0%, #333 100%);
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#000), color-stop(100%,#333));
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#333333',GradientType=1 );
-}
 pre.bash:before {
     content: "bash";
-    color: #efefef;
 }
 
 
