@@ -42,13 +42,13 @@
 
 
 html {
+    font-family: Helvetica, Verdana, Arial, sans-serif;
+    font-size: 100%;
     margin: 0;
     padding: 0;
     background-color: #666;
 }
 body {
-    font-family: Helvetica, Verdana, Arial, sans-serif;
-    font-size: 100%;
     width: 800px;
     margin: 10px auto;
     padding: 2em;
