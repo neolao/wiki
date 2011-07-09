@@ -15,14 +15,22 @@ if (isOutsideWiki($filePath)) {
 }
 
 
-$filePath = realpath($filePath);
-$directoryPath = dirname($filePath);
-$content = file_get_contents($filePath);
+$config         = getConfig();
+$filePath       = realpath($filePath);
+$directoryPath  = dirname($filePath);
+$content        = file_get_contents($filePath);
 
 // Convert the raw content to wiki content
-include_once(INC_PATH.'/Textile.php');
-$textile = new Textile();
-$html = $textile->TextileThis($content);
+switch ($config['syntax']) {
+    case 'markdown':
+        include_once(INC_PATH.'/markdown/markdown.php');
+        $html = Markdown($content);
+        break;
+    default:
+        include_once(INC_PATH.'/textile/Textile.php');
+        $textile = new Textile();
+        $html = $textile->TextileThis($content);
+}
 
 
 // Find the main title

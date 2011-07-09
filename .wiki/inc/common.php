@@ -26,7 +26,8 @@ define('SCRIPTS_URL',   PROJECT_URL.'/scripts');
 function getConfig()
 {
     $default = array(
-        'theme' => 'default'
+        'theme'     => 'default',
+        'syntax'    => 'textile'
     );
 
     $configFile = PROJECT_PATH.'/config.ini';
