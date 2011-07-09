@@ -405,7 +405,7 @@ class Textile
 			'/(\S)\"(?=\s|'.$pnc.'|<|$)/',          // double closing
 			'/"/',                                  // double opening
 			'/\b(['.$abr.']['.$acr.']{2,})\b(?:[(]([^)]*)[)])/'.$mod,  // 3+ uppercase acronym
-			'/(?<=\s|^|[>(;-])(['.$abr.']{3,})(['.$nab.']*)(?=\s|'.$pnc.'|<|$)(?=[^">]*?(<|$))/'.$mod,  // 3+ uppercase
+			//'/(?<=\s|^|[>(;-])(['.$abr.']{3,})(['.$nab.']*)(?=\s|'.$pnc.'|<|$)(?=[^">]*?(<|$))/'.$mod,  // 3+ uppercase
 			'/([^.]?)\.{3}/',                       // ellipsis
 			'/(\s?)--(\s?)/',                       // em dash
 			'/\s-(?:\s|$)/',                        // en dash
@@ -428,7 +428,7 @@ class Textile
 			'$1'.txt_quote_double_close,           // double closing
 			txt_quote_double_open,                 // double opening
 			'<acronym title="$2">$1</acronym>',     // 3+ uppercase acronym
-			'<span class="caps">glyph:$1</span>$2', // 3+ uppercase
+			//'<span class="caps">glyph:$1</span>$2', // 3+ uppercase
 			'$1'.txt_ellipsis,                     // ellipsis
 			'$1'.txt_emdash.'$2',                  // em dash
 			' '.txt_endash.' ',                    // en dash
