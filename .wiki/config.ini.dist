@@ -1,1 +1,2 @@
-theme = default
+theme       = default
+syntax      = textile
