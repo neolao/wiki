@@ -6,6 +6,7 @@ define('INC_PATH',      PROJECT_PATH.'/inc');
 define('JS_PATH',       PROJECT_PATH.'/js');
 define('THEMES_PATH',   PROJECT_PATH.'/themes');
 define('SCRIPTS_PATH',  PROJECT_PATH.'/scripts');
+define('DATA_PATH',     PROJECT_PATH.'/data');
 
 $phpSelf = $_SERVER['PHP_SELF'];
 $baseUrl = substr($phpSelf, 0, strrpos($phpSelf, '/'));
@@ -16,6 +17,23 @@ define('PROJECT_URL',   BASE_URL.'/.wiki');
 define('JS_URL',        PROJECT_URL.'/js');
 define('THEMES_URL',    PROJECT_URL.'/themes');
 define('SCRIPTS_URL',   PROJECT_URL.'/scripts');
+
+
+
+// Autoload classes
+function __autoload($className)
+{
+    $includePaths = explode(PATH_SEPARATOR, get_include_path());
+    $relativeFilePath = str_replace('_', '/', $className).'.php';
+    foreach ($includePaths as $includePath) {
+        $filePath = $includePath.'/'.$relativeFilePath;
+        if (file_exists($filePath)) {
+            include_once $filePath;
+        }
+    }
+}
+set_include_path(get_include_path().PATH_SEPARATOR.INC_PATH);
+
 
 
 /**
@@ -131,3 +149,5 @@ function rglob($pattern, $path)
     }
     return $files;
 }
+
+

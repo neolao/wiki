@@ -113,55 +113,22 @@ $('h1, h2, h3, h4, h5, h6').each(function(index)
 
 
 // Search engine
-var searchQueue = [];
-var searchResultUrls = [];
 var onSearchKeyUp = function(event)
 {
     if (event.keyCode == '13') {
-        if (!searchInput.hasClass("loading")) {
-            searchInput.addClass("loading");
-        }
+        searchInput.addClass("loading");
         searchResult.css('display', 'none');
-        searchQueue = [];
-        searchResultUrls = [];
-        $.getJSON(SCRIPTS_URL+'/fileList.php', onGetFileList);
-    }
-};
-var onGetFileList = function(list)
-{
-    if (typeof list == "string") {
-        searchInput.removeClass("loading");
-        searchResult.css('display', 'block');
-        searchResult.html('<p class="error">'+list+'</p>');
-        return;
-    }
-    searchQueue = list;
-    nextSearch();
-};
-var nextSearch = function()
-{
-    if (searchQueue.length === 0) {
-        searchInput.removeClass("loading");
-        return;
-    }
 
-    var term = searchInput.val();
-    var file = searchQueue.shift();
-    $.getJSON(SCRIPTS_URL+'/search.php', {file: file, term: term}, onSearch);
+        var term = searchInput.val();
+        $.getJSON(SCRIPTS_URL+'/search.php', {term: term}, onSearch);
+    }
 };
 var onSearch = function(data)
 {
-    if (data !== false) {
-        searchResultUrls.push(data);
-    }
-    updateSearchResult();
-    nextSearch();
-};
-var updateSearchResult = function()
-{
+    searchInput.removeClass("loading");
     searchResult.css('display', 'block');
 
-    var count = searchResultUrls.length;
+    var count = data.length;
     var html = '<h1>'+count;
     if (count > 1) {
         html += ' results';
@@ -171,7 +138,7 @@ var updateSearchResult = function()
     html += '</h1>';
 
     html += '<ul>';
-    $.each(searchResultUrls, function(index, link)
+    $.each(data, function(index, link)
     {
         html += '<li><a href="'+link+'">'+link+'</a></li>';
     });

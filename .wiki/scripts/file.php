@@ -15,10 +15,17 @@ if (isOutsideWiki($filePath)) {
 }
 
 
+
 $config         = getConfig();
 $filePath       = realpath($filePath);
 $directoryPath  = dirname($filePath);
 $content        = file_get_contents($filePath);
+$search         = new Wiki_Search();
+
+
+// Auto index the page
+$search->index($filePath);
+
 
 // Convert the raw content to wiki content
 switch ($config['syntax']) {
