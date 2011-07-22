@@ -1,0 +1,3 @@
+h1. Sitemap
+
+Sitemap location : ".wiki/sitemap.php":../.wiki/sitemap.php

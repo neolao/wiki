@@ -20,3 +20,7 @@ h2. The syntax
 * "Images":syntax/images.wiki
 * "Code":syntax/code.wiki
 * "Browse":syntax/browse.wiki
+
+h2. Tools
+
+* "Sitemap":tools/sitemap.wiki
