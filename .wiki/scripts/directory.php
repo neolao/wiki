@@ -49,14 +49,12 @@ $browse .= '</ul>';
     <head>
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
-        <?php echo getCommonHtmlHeader(); ?>
         <?php
+        echo getCommonHtmlHeader();
+        echo getToolbarHeader();
+
         echo '<script type="text/javascript">';
-        // Config
-        echo 'config                = {};';
-        echo 'config.isFile         = false;';
-        echo 'config.isDirectory    = true;';
-        echo 'config.isHome         = false;';
+        echo 'config.isDirectory = true;';
 
         // Breadcrumb
         $separator = '';
@@ -74,7 +72,6 @@ $browse .= '</ul>';
 
         echo '</script>';
         ?>
-        <?php echo getToolbarHeader(); ?>
     </head>
     <body>
         <h1><?php echo $title; ?></h1>

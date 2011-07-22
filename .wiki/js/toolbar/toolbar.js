@@ -158,7 +158,7 @@ var breadcrumb = $('<ul id="breadcrumb">');
 search.append(breadcrumb);
 
 if (!config.isHome) {
-    var lastBreadcrumbUrl = '/';
+    var lastBreadcrumbUrl = BASE_URL+'/';
     breadcrumb.append('<li><a href="'+lastBreadcrumbUrl+'">home</a></li>');
     for (var folderIndex = 0; folderIndex < config.breadcrumb.length; folderIndex++) {
         var folderName = config.breadcrumb[folderIndex];

@@ -95,31 +95,12 @@ $html = preg_replace('|<p>\[browse ?(\d*)?\]</p>|', $browse, $html);
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
 
-        <?php echo getCommonHtmlHeader(); ?>
-        <?php
-        echo '<script type="text/javascript">';
-        // Config
-        echo 'config                = {};';
-        echo 'config.isFile         = true;';
-        echo 'config.isDirectory    = false;';
-        if ($path === 'index.wiki') {
-            echo 'config.isHome     = true;';
-        } else {
-            echo 'config.isHome     = false;';
-        }
+        <?php 
+        echo getCommonHtmlHeader();
 
-        // Breadcrumb
-        $separator = '';
-        $breadcrumb = explode('/', $path);
-        array_pop($breadcrumb);
-        echo 'config.breadcrumb = [';
-        foreach ($breadcrumb as $folderName) {
-            echo $separator, '"', $folderName, '"';
-            $separator = ', ';
-        }
-        echo '];';
 
         // Code highlighter
+        echo '<script type="text/javascript">';
         if ($hasCode) {
             $highlighter = array(JS_URL.'/syntaxHighlighter/sh_main.js');
             foreach ($languages as $language) {
@@ -132,10 +113,30 @@ $html = preg_replace('|<p>\[browse ?(\d*)?\]</p>|', $browse, $html);
             }
             echo 'function(){sh_highlightDocumentCustom()});';
         }
+        echo '</script>';
 
+
+        echo getToolbarHeader();
+
+
+        echo '<script type="text/javascript">';
+        echo 'config.isFile = true;';
+        if ($path === 'index.wiki') {
+            echo 'config.isHome = true;';
+        }
+
+        // Breadcrumb
+        $separator = '';
+        $breadcrumb = explode('/', $path);
+        array_pop($breadcrumb);
+        echo 'config.breadcrumb = [';
+        foreach ($breadcrumb as $folderName) {
+            echo $separator, '"', $folderName, '"';
+            $separator = ', ';
+        }
+        echo '];';
         echo '</script>';
         ?>
-        <?php echo getToolbarHeader(); ?>
     </head>
     <body>
 

@@ -112,9 +112,16 @@ function getToolbarHeader()
     $html .= '"'.JS_URL.'/toolbar/jquery-1.4.4.min.js",';
     $html .= '"'.JS_URL.'/toolbar/toolbar.js"';
     $html .= ');';
-    $html .= 'var BASE_URL = "'.BASE_URL.'";';
-    $html .= 'var SCRIPTS_URL = "'.SCRIPTS_URL.'";';
+    $html .= 'var BASE_URL      = "'.BASE_URL.'";';
+    $html .= 'var SCRIPTS_URL   = "'.SCRIPTS_URL.'";';
+    
+    // Config
+    $html .= 'config                = {};';
+    $html .= 'config.isFile         = true;';
+    $html .= 'config.isDirectory    = false;';
+    $html .= 'config.isHome         = false;';
     $html .= '</script>';
+    
     return $html;
 }
 
