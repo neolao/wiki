@@ -54,11 +54,12 @@ class Wiki_Search
         }
 
         // Create a new document
+        Zend_Search_Lucene_Analysis_Analyzer::setDefault(new Zend_Search_Lucene_Analysis_Analyzer_Common_Utf8());
         $document = new Zend_Search_Lucene_Document();
         $document->addField(Zend_Search_Lucene_Field::keyword('path', $filePath));
         $document->addField(Zend_Search_Lucene_Field::keyword('modificationTime', $modificationTime));
         $document->addField(Zend_Search_Lucene_Field::keyword('checksum', $checksum));
-        $document->addField(Zend_Search_Lucene_Field::unStored('content', $content));
+        $document->addField(Zend_Search_Lucene_Field::unStored('content', $content, 'utf-8'));
         $this->_data->addDocument($document);
 
         // Commit the changes
