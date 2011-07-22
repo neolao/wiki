@@ -67,6 +67,12 @@ class Wiki_Search
         $this->_data->optimize();
     }
 
+    /**
+     * Search into files
+     *
+     * @param   string      $query      The query
+     * @return  array                   The file list
+     */
     public function find($query)
     {
         $result = array();
@@ -77,5 +83,15 @@ class Wiki_Search
         }
 
         return $result;
+    }
+
+    /**
+     * Get the document count
+     *
+     * @return  int                     Document count
+     */
+    public function getDocumentCount()
+    {
+        return $this->_data->numDocs();
     }
 }
