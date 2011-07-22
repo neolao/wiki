@@ -25,6 +25,8 @@ class Wiki_Search
         } catch (Exception $error) {
             $this->_data = Zend_Search_Lucene::create($dataPath);
         }
+
+        Zend_Search_Lucene_Analysis_Analyzer::setDefault(new Zend_Search_Lucene_Analysis_Analyzer_Common_Utf8Num_CaseInsensitive());
     }
 
     /**
@@ -54,7 +56,6 @@ class Wiki_Search
         }
 
         // Create a new document
-        Zend_Search_Lucene_Analysis_Analyzer::setDefault(new Zend_Search_Lucene_Analysis_Analyzer_Common_Utf8());
         $document = new Zend_Search_Lucene_Document();
         $document->addField(Zend_Search_Lucene_Field::keyword('path', $filePath));
         $document->addField(Zend_Search_Lucene_Field::keyword('modificationTime', $modificationTime));
