@@ -105,7 +105,7 @@ $('h1, h2, h3, h4, h5, h6').each(function(index)
     line.append(link);
     link.click(function()
     {
-        var scrollY = title.position().top - toc.position().top;
+        var scrollY = title.position().top - toolbar.height();
         $(document).scrollTop(scrollY);
     });
 });

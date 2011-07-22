@@ -515,12 +515,17 @@ pre.bash:before {
     border-top: solid 1px #030;
     border-right: solid 1px #030;
     padding: 10px;
-    position: absolute;
+    position: fixed;
     top: 2em;
     right: 0;
     -webkit-border-bottom-left-radius: 10px;
     -moz-border-radius-bottomleft: 10px;
     border-bottom-left-radius: 10px;
+
+    max-height: 70%;
+    max-width: 30%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
     #toc * {
         font-size: .9em;
@@ -552,6 +557,17 @@ pre.bash:before {
     #toc .level6 {
         margin-left: 7.5em;
     }
+#toc::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+#toc::-webkit-scrollbar-thumb:vertical {
+    min-height: 20px;
+    background: rgba(255, 255, 0, .5);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
 
 
 #search {
