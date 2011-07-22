@@ -14,5 +14,8 @@ $search = new Wiki_Search();
         
         <h2>Search engine</h2>
         <p>Document count : <?php echo $search->getDocumentCount(); ?></p>
+        <ul>
+            <li><a href="search/indexAllPages.php">Index all pages</a></li>
+        </ul>
     </body>
 </html>
