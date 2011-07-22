@@ -12,11 +12,19 @@ $phpSelf = $_SERVER['PHP_SELF'];
 $baseUrl = substr($phpSelf, 0, strrpos($phpSelf, '/'));
 $baseUrl = substr($baseUrl, 0, strrpos($baseUrl, '/'));
 $baseUrl = substr($baseUrl, 0, strrpos($baseUrl, '/'));
+$hostUrl = $_SERVER['HTTP_HOST'];
+if ($_SERVER['SERVER_PORT'] == 443) {
+    $hostUrl = 'https://'.$hostUrl;
+} else {
+    $hostUrl = 'http://'.$hostUrl;
+}
+define('HOST_URL',      $hostUrl);
 define('BASE_URL',      $baseUrl);
 define('PROJECT_URL',   BASE_URL.'/.wiki');
 define('JS_URL',        PROJECT_URL.'/js');
 define('THEMES_URL',    PROJECT_URL.'/themes');
 define('SCRIPTS_URL',   PROJECT_URL.'/scripts');
+
 
 
 
@@ -132,6 +140,17 @@ function isOutsideWiki($path)
     return false;
 }
 
+/**
+ * Get the file url from the file path
+ *
+ * @param   string  $filePath   The file path
+ * @return  string              The file url
+ */
+function getFileUrl($filePath)
+{
+    $relativePath = substr($filePath, strlen(BASE_PATH));
+    return BASE_URL.$relativePath;
+}
 
 /**
  * Recurvise glob (see glob function)

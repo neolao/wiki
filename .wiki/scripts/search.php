@@ -17,8 +17,7 @@ $filePaths = $search->find($term);
 $urls = array();
 foreach ($filePaths as $filePath) {
     if (!isOutsideWiki($filePath)) {
-        $relativePath = substr($filePath, strlen(BASE_PATH));
-        $urls[] = '"'.BASE_URL.$relativePath.'"';
+        $urls[] = '"'.getFileUrl($filePath).'"';
     }
 }
 
