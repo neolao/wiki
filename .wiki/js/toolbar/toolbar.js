@@ -1,7 +1,6 @@
 var html = $('html');
 var body = $('body');
-var toolbar = $(document.createElement('div'));
-toolbar.attr('id', 'toolbar');
+var toolbar = $('<div id="toolbar">');
 body.before(toolbar);
 
 
@@ -66,8 +65,7 @@ toolbar.hover(onToolbarOver, onToolbarOut);
 
 
 // Table of contents
-var toc = $(document.createElement('div'));
-toc.attr('id', 'toc');
+var toc = $('<div id="toc">');
 toolbar.append(toc);
 $('h1, h2, h3, h4, h5, h6').each(function(index)
 {
@@ -95,11 +93,11 @@ $('h1, h2, h3, h4, h5, h6').each(function(index)
             break;
     }
 
-    var line = $(document.createElement('p'));
+    var line = $('<p>');
     line.addClass('level'+level);
     toc.append(line);
 
-    var link = $(document.createElement('a'));
+    var link = $('<a>');
     link.attr('href', 'javascript:void(0)');
     link.text(text);
     line.append(link);
@@ -146,12 +144,26 @@ var onSearch = function(data)
 
     searchResult.html(html);
 };
-var search = $(document.createElement('div'));
-search.attr('id', 'search');
+var search = $('<div id="search">');
 toolbar.append(search);
-var searchInput = $(document.createElement('input'));
+var searchInput = $('<input>');
 searchInput.keyup(onSearchKeyUp);
 search.append(searchInput);
-var searchResult = $(document.createElement('div'));
-searchResult.attr('id', 'searchResult');
+var searchResult = $('<div id="searchResult">');
 search.append(searchResult);
+
+
+// Breadcrumb
+var breadcrumb = $('<ul id="breadcrumb">');
+search.append(breadcrumb);
+
+if (config.breadcrumb.length > 0 || config.isDirectory) {
+    var lastBreadcrumbUrl = '/';
+    breadcrumb.append('<li><a href="'+lastBreadcrumbUrl+'">home</a></li>');
+    for (var folderIndex = 0; folderIndex < config.breadcrumb.length; folderIndex++) {
+        var folderName = config.breadcrumb[folderIndex];
+        lastBreadcrumbUrl += folderName;
+        breadcrumb.append('<li><a href="'+lastBreadcrumbUrl+'">'+folderName+'</a></li>');
+        lastBreadcrumbUrl += '/';
+    }
+}

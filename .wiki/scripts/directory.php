@@ -50,6 +50,29 @@ $browse .= '</ul>';
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
         <?php echo getCommonHtmlHeader(); ?>
+        <?php
+        echo '<script type="text/javascript">';
+        // Config
+        echo 'config                = {};';
+        echo 'config.isFile         = false;';
+        echo 'config.isDirectory    = true;';
+
+        // Breadcrumb
+        $separator = '';
+        $breadcrumb = explode('/', $path);
+        $currentFolder = array_pop($breadcrumb);
+        if (empty($currentFolder)) {
+            array_pop($breadcrumb);
+        }
+        echo 'config.breadcrumb = [';
+        foreach ($breadcrumb as $folderName) {
+            echo $separator, '"', $folderName, '"';
+            $separator = ', ';
+        }
+        echo '];';
+
+        echo '</script>';
+        ?>
         <?php echo getToolbarHeader(); ?>
     </head>
     <body>

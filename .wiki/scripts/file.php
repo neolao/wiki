@@ -97,8 +97,24 @@ $html = preg_replace('|<p>\[browse ?(\d*)?\]</p>|', $browse, $html);
 
         <?php echo getCommonHtmlHeader(); ?>
         <?php
-        // Code highlighter
         echo '<script type="text/javascript">';
+        // Config
+        echo 'config                = {};';
+        echo 'config.isFile         = true;';
+        echo 'config.isDirectory    = false;';
+
+        // Breadcrumb
+        $separator = '';
+        $breadcrumb = explode('/', $path);
+        array_pop($breadcrumb);
+        echo 'config.breadcrumb = [';
+        foreach ($breadcrumb as $folderName) {
+            echo $separator, '"', $folderName, '"';
+            $separator = ', ';
+        }
+        echo '];';
+
+        // Code highlighter
         if ($hasCode) {
             $highlighter = array(JS_URL.'/syntaxHighlighter/sh_main.js');
             foreach ($languages as $language) {
@@ -111,6 +127,7 @@ $html = preg_replace('|<p>\[browse ?(\d*)?\]</p>|', $browse, $html);
             }
             echo 'function(){sh_highlightDocumentCustom()});';
         }
+
         echo '</script>';
         ?>
         <?php echo getToolbarHeader(); ?>
