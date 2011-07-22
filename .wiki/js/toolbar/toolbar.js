@@ -157,7 +157,7 @@ search.append(searchResult);
 var breadcrumb = $('<ul id="breadcrumb">');
 search.append(breadcrumb);
 
-if (config.breadcrumb.length > 0 || config.isDirectory) {
+if (!config.isHome) {
     var lastBreadcrumbUrl = '/';
     breadcrumb.append('<li><a href="'+lastBreadcrumbUrl+'">home</a></li>');
     for (var folderIndex = 0; folderIndex < config.breadcrumb.length; folderIndex++) {

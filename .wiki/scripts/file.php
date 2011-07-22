@@ -102,6 +102,11 @@ $html = preg_replace('|<p>\[browse ?(\d*)?\]</p>|', $browse, $html);
         echo 'config                = {};';
         echo 'config.isFile         = true;';
         echo 'config.isDirectory    = false;';
+        if ($path === 'index.wiki') {
+            echo 'config.isHome     = true;';
+        } else {
+            echo 'config.isHome     = false;';
+        }
 
         // Breadcrumb
         $separator = '';

@@ -56,6 +56,7 @@ $browse .= '</ul>';
         echo 'config                = {};';
         echo 'config.isFile         = false;';
         echo 'config.isDirectory    = true;';
+        echo 'config.isHome         = false;';
 
         // Breadcrumb
         $separator = '';
