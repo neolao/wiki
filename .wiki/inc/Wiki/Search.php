@@ -20,6 +20,10 @@ class Wiki_Search
     {
         $dataPath = DATA_PATH.'/search';
 
+        if (!is_writable(DATA_PATH)) {
+            die('The directory ' . DATA_PATH . ' is not writable');
+        }
+
         try {
             $this->_data = Zend_Search_Lucene::open($dataPath);
         } catch (Exception $error) {
