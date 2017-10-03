@@ -53,7 +53,8 @@ function getConfig()
 {
     $default = array(
         'theme'     => 'default',
-        'syntax'    => 'textile'
+        'syntax'    => 'textile',
+        'site_title_suffix'=> 'Textile Wiki',
     );
 
     $configFile = PROJECT_PATH.'/config.ini';
@@ -101,6 +102,17 @@ function getCommonHtmlHeader()
 }
 
 /**
+ * Get the common site title suffix
+ * @return string   the site suffix
+ */
+function getTitleSuffix()
+{
+    $config = getConfig();
+    $suffix = !empty($config["site_title_suffix"])?$config["site_title_suffix"]." | ":"";
+    return $suffix;
+}
+
+/**
  * Get the toolbar HTML header
  *
  * @return  string      The HTML header
@@ -114,14 +126,14 @@ function getToolbarHeader()
     $html .= ');';
     $html .= 'var BASE_URL      = "'.BASE_URL.'";';
     $html .= 'var SCRIPTS_URL   = "'.SCRIPTS_URL.'";';
-    
+
     // Config
     $html .= 'config                = {};';
     $html .= 'config.isFile         = true;';
     $html .= 'config.isDirectory    = false;';
     $html .= 'config.isHome         = false;';
     $html .= '</script>';
-    
+
     return $html;
 }
 

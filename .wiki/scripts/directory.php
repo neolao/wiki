@@ -13,9 +13,10 @@ if (isOutsideWiki($directoryPath)) {
 
 
 // Page title
+$title = getTitleSuffix();
 $directoryPath = realpath($directoryPath);
 $pathInfo = explode('/', $directoryPath);
-$title = $pathInfo[count($pathInfo) - 1];
+$title .= $pathInfo[count($pathInfo) - 1];
 
 // Browse
 $folders = array();

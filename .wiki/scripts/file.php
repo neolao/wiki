@@ -41,7 +41,7 @@ switch ($config['syntax']) {
 
 
 // Find the main title
-$title = 'Undefined';
+$title = getTitleSuffix().'Undefined';
 $count = preg_match('|<h1>([^<]+)</h1>|', $html, $matches);
 if ($count > 0) {
     $title = $matches[1];
@@ -50,7 +50,7 @@ if ($count > 0) {
 
 // Find code
 $availableLanguages = array('bash', 'bison', 'c', 'changelog', 'code', 'cpp', 'css', 'diff', 'haxe', 'html', 'java',
-    'javascript', 'latex', 'log', 'makefile', 'pascal', 'perl', 'php', 'prolog', 'properties', 'python', 
+    'javascript', 'latex', 'log', 'makefile', 'pascal', 'perl', 'php', 'prolog', 'properties', 'python',
     'ruby', 'scala', 'sh', 'sql', 'xml', 'xorg');
 $languages = array();
 foreach ($availableLanguages as $language) {
@@ -95,7 +95,7 @@ $html = preg_replace('|<p>\[browse ?(\d*)?\]</p>|', $browse, $html);
         <meta charset="utf-8" />
         <title><?php echo $title; ?></title>
 
-        <?php 
+        <?php
         echo getCommonHtmlHeader();
 
 
